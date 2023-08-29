@@ -227,6 +227,8 @@ sliderElements.forEach(element => {
         element.style.cursor = 'pointer';
         element.addEventListener('click', () => {
             element.next()
+            clearTimeout(element.autoplayTimeout)
+            if(element.hasAttribute('slider-autoplay')) element.autoplay()
         })
 }
 })
