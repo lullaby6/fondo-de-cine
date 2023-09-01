@@ -13,4 +13,8 @@ presentarRandomColor.forEach(e => {
         afterColor = extraMethods.random.ItemArray(afterColors)
     }
     e.style.setProperty('--presentar-bg', afterColor);
+
+    e.style.position = 'relative';
+    e.style.left = `${extraMethods.random.FloatInterval(-5, 5)}px`
+    e.style.top = `${extraMethods.random.FloatInterval(-5, 5)}px`
 })
