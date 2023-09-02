@@ -5,6 +5,11 @@
     src: url("../fonts/Dhaks-Regular.ttf") format("opentype");
 }
 
+@font-face {
+    font-family: Sceageus;
+    src: url("../fonts/Sceageus.otf") format("opentype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -235,7 +240,7 @@ main #presentar {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    font-family: DhaksRegular;
+    font-family: Sceageus;
 }
 
 main #presentar .title-c-c {
@@ -254,8 +259,8 @@ main #presentar .title-c-c .title-c h3{
     display: flex;
     background-color: var(--text-alt-color);
     text-transform: uppercase;
-    padding: 12.5px 25px 0 25px;
-    font-size: 50px;
+    padding: 25px 50px;
+    font-size: 37.5px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -272,7 +277,7 @@ main #presentar .title-c-c .title-c h3::after{
     background-color: var(--presentar-bg);
     width: 0%;
     height: 100%;
-    padding-top: 7.5px;
+    /* padding-top: 7.5px; */
     /* translate: 0 5px; */
     transition: width .5s ease-in-out;
     -webkit-transition: width .5s ease-in-out;
