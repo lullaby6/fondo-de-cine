@@ -255,7 +255,7 @@ main #presentar .title-c-c .title-c{
     /* flex-direction: column; */
 }
 
-main #presentar .title-c-c .title-c h3{
+main #presentar .title-c-c .title-c a{
     display: flex;
     background-color: var(--text-alt-color);
     text-transform: uppercase;
@@ -264,9 +264,11 @@ main #presentar .title-c-c .title-c h3{
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    text-decoration: none;
+    color: var(--text-important-color);
 }
 
-main #presentar .title-c-c .title-c h3::after{
+main #presentar .title-c-c .title-c a::after{
     content: '';
     display: flex;
     justify-content: center;
@@ -286,7 +288,7 @@ main #presentar .title-c-c .title-c h3::after{
     -o-transition: width .5s ease-in-out;
 }
 
-main #presentar .title-c-c .title-c h3:hover::after{
+main #presentar .title-c-c .title-c a:hover::after{
     content: 'SI!!';
     width: 100%;
 }
@@ -297,6 +299,56 @@ main #presentar .bg{
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+main #presentar .form-c {
+    background-color: rgba(20, 20, 20, .25);
+    padding: 50px;
+    /* width: 250px; */
+    width: 750px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+main #presentar .form-c form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 25px;
+    color: var(--text-important-color);
+    font-family: Montserrat;
+    width: 100%;
+}
+
+main #presentar .form-c form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+main #presentar .form-c form input{
+    padding: 10px 50px;
+    border: none;
+    width: 100%;
+}
+
+main #presentar .form-c form div input{
+    width: 50%;
+}
+
+main #presentar .form-c form input:focus{
+    outline: none;
+}
+
+main #presentar .form-c form input[type="submit"]{
+    cursor: pointer;
+    background-color: #C389BC;
+    color: var(--text-alt-color);
+    /* width: 100%; */
 }
 
 footer {
