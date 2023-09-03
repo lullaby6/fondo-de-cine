@@ -54,62 +54,6 @@ body {
     overflow-x: hidden !important;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-
-    padding: 2.5px 100px;
-
-    background-color: rgba(20, 20, 20, .125);
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 30px;
-}
-
-header nav a {
-    font-weight: 600;
-    color: var(--text-alt-color);
-    text-decoration: none;
-    font-size: 14px;
-    position: relative;
-    cursor: pointer;
-}
-
-header nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -2.5px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: var(--text-alt-color);
-    transition: width .5s ease-in-out;
-    -webkit-transition: width .5s ease-in-out;
-    -moz-transition: width .5s ease-in-out;
-    -ms-transition: width .5s ease-in-out;
-    -o-transition: width .5s ease-in-out;
-}
-
-header nav a:hover::after {
-    width: 100%;
-}
-
-header #logo {
-    width: 50px;
-}
-
 main #main {
     display: flex;
     flex-direction: column;
@@ -259,8 +203,8 @@ main #presentar .title-c-c .title-c a{
     display: flex;
     background-color: var(--text-alt-color);
     text-transform: uppercase;
-    padding: 25px 50px;
-    font-size: 37.5px;
+    padding: 30px 60px;
+    font-size: 30px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -269,7 +213,8 @@ main #presentar .title-c-c .title-c a{
 }
 
 main #presentar .title-c-c .title-c a::after{
-    content: '';
+    content: 'SI!!';
+    overflow: hidden !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,20 +234,17 @@ main #presentar .title-c-c .title-c a::after{
 }
 
 main #presentar .title-c-c .title-c a:hover::after{
-    content: 'SI!!';
     width: 100%;
 }
 
-
-main #presentar .bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+main #presentar .title-c-c .title-c .corto-button {
+    background-color: #FE3030;
 }
 
 main #presentar .form-c {
-    background-color: rgba(20, 20, 20, .25);
+    /* background-color: rgba(20, 20, 20, .25); */
+    border-top: 1px solid var(--border-low-color);
+    border-bottom: 1px solid var(--border-low-color);
     padding: 50px;
     /* width: 250px; */
     width: 750px;
@@ -334,6 +276,8 @@ main #presentar .form-c form input{
     padding: 10px 50px;
     border: none;
     width: 100%;
+    border: 1px solid var(--border-color);
+    box-shadow: 5px 5px #6868684b;
 }
 
 main #presentar .form-c form div input{

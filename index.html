@@ -10,44 +10,39 @@
     <link rel="stylesheet" href="./assets/libs/normalize.css">
     <script src="./assets/libs/iconify-icon.min.js" defer></script>
     <script src="./assets/libs/slider.js" defer></script>
-    <script src="./assets/libs/magic-header.js" defer></script>
     <script src="./assets/libs/mouse-parallax.js" defer></script>
     <script src="./assets/libs/extra-methods.js" defer></script>
+    <script src="./assets/libs/html-component.js" defer></script>
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/main.js" defer></script>
 </head>
 <body>
-    <header magic-header magic-header-delay="5000" magic-header-show-duration="375" magic-header-hide-duration="375">
-        <a href="."><img id="logo" src="./assets/images/logo.png" alt=""></a>
-        <nav>
-            <a>PROXIMA FECHA📆</a>
-            <a href="#presentar">PRESENTAR CORTO📩</a>
-            <a href="#ediciones">EDICIONES📃</a>
-            <a>APOYAR❤️</a>
-        </nav>
-    </header>
+    <html-component src="./components/header.html"></html-component>
     <main>
         <section id="main">
-            <img src="./assets/images/slider/370986661_1412848289447811_4443293467321320094_n.jpeg" alt="">
+            <html-component shadow-dom src="./components/bg-image.html" bgposition="center bottom" height="90vh" position="relative" repeat="repeat" size="cover" imageurl="../assets/images/0.jpg"></html-component>
             <a href="#ediciones"><iconify-icon icon="ep:arrow-up" rotate="180deg" width="25"></iconify-icon></a>
         </section>
         <section id="ediciones">
-            <!-- <img class="bg" src="./assets/images/bg.png" alt=""> -->
             <h1>EDICIONES</h1>
             <div class="ediciones-c">
                 <div class="edicion">
-                    <h2>EDICION Nº 1</h2>
+                    <h2>PRIMERA EDICION</h2>
+                    <!-- <h2>PRIMERA EDICION Nº 1</h2> -->
                     <div class="c">
                         <div class="slider" slider slider-autoplay slider-autoplay-delay="3000" slider-click>
-                            <img src="./assets/images/slider/369172388_988471672372953_7767963483600291262_n.jpeg" slider-item alt="">
-                            <img src="./assets/images/slider/370593935_1082670886473920_1910812080160877940_n.jpeg" slider-item alt="">
-                            <img src="./assets/images/slider/370606514_669709831723934_2717311032238380721_n.jpeg" slider-item alt="">
-                            <img src="./assets/images/slider/370681894_764336022361716_1710712144372620724_n.jpeg" slider-item alt="">
-                            <img src="./assets/images/slider/371000309_841620870949020_5968889677580320023_n.jpeg" slider-item alt="">
-                            <img src="./assets/images/slider/371317700_1492523431327982_2691814088230813892_n.jpeg" slider-item alt="">
-                            <img src="./assets/images/slider/371406174_1015397786552653_4300003486942862941_n.jpeg" slider-item alt="">
-                            <img src="./assets/images/slider/371744720_2599801443528243_3074167982143423789_n.jpeg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/0.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/1.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/2.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/3.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/4.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/5.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/6.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/7.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/8.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/9.jpg" slider-item alt="">
+                            <img src="./assets/images/ediciones/primera/10.jpg" slider-item alt="">
                         </div>
                         <div class="text">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex vitae excepturi accusamus aliquid inventore ab commodi a earum quos, assumenda, quod culpa? Doloremque nesciunt distinctio natus adipisci, repellat quo quidem.</p>
@@ -56,12 +51,12 @@
                     </div>
                 </div>
                 <div class="edicion">
-                    <h2>EDICION Nº 2 - Proximamente...</h2>
+                    <h2>SEGUNDA EDICION - Proximamente...</h2>
                 </div>
             </div>
         </section>
         <section id="presentar">
-            <img src="./assets/images/bg.png" class="bg" alt="">
+            <html-component shadow-dom src="./components/bg-image.html" repeat="repeat" size="cover" imageurl="../assets/images/bg.png"></html-component>
             <div class="title-c-c">
                 <div class="title-c">
                     <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="3">Queres</a>
@@ -69,7 +64,7 @@
                 </div>
                 <div class="title-c">
                     <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="3">Tu</a>
-                    <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="3">Corto</a>
+                    <a href="/presentar.html" class="presentar-random-color corto-button" mouse-parallax mouse-parallax-strength="3">Corto</a>
                     <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="4">En</a>
                 </div>
                 <div class="title-c">

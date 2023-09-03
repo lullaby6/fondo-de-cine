@@ -1,0 +1,69 @@
+<style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+
+        padding: 2.5px 100px;
+
+        background-color: rgba(20, 20, 20, .25);
+    }
+
+    header nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+    }
+
+    header nav a {
+        font-weight: 600;
+        color: var(--text-alt-color);
+        text-decoration: none;
+        font-size: 14px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    header nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -2.5px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--text-alt-color);
+        transition: width .5s ease-in-out;
+        -webkit-transition: width .5s ease-in-out;
+        -moz-transition: width .5s ease-in-out;
+        -ms-transition: width .5s ease-in-out;
+        -o-transition: width .5s ease-in-out;
+    }
+
+    header nav a:hover::after {
+        width: 100%;
+    }
+
+    header #logo {
+        width: 50px;
+    }
+</style>
+
+<header magic-header magic-header-delay="5000" magic-header-show-duration="375" magic-header-hide-duration="375">
+    <a href="."><img id="logo" src="./assets/images/logo.png" alt=""></a>
+    <nav>
+        <a>PROXIMA FECHA📆</a>
+        <a href="/.#ediciones">EDICIONES📃</a>
+        <a href="/.#presentar">PRESENTAR CORTO📩</a>
+        <a>APOYAR❤️</a>
+    </nav>
+</header>
+
+<script src="./assets/libs/magic-header.js" defer></script>

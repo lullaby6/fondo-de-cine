@@ -10,29 +10,21 @@
     <link rel="stylesheet" href="./assets/libs/normalize.css">
     <script src="./assets/libs/iconify-icon.min.js" defer></script>
     <script src="./assets/libs/slider.js" defer></script>
-    <script src="./assets/libs/magic-header.js" defer></script>
     <script src="./assets/libs/mouse-parallax.js" defer></script>
     <script src="./assets/libs/extra-methods.js" defer></script>
     <script src="./assets/libs/scroll-fade.js" defer></script>
     <script src="./assets/libs/form-extra.js" defer></script>
+    <script src="./assets/libs/html-component.js" defer></script>
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/main.js" defer></script>
 </head>
 <body>
-    <header magic-header magic-header-delay="5000" magic-header-show-duration="375" magic-header-hide-duration="375">
-        <a href="."><img id="logo" src="./assets/images/logo.png" alt=""></a>
-        <nav>
-            <a>PROXIMA FECHA📆</a>
-            <a href="/.#presentar">PRESENTAR CORTO📩</a>
-            <a href="/.#ediciones">EDICIONES📃</a>
-            <a>APOYAR❤️</a>
-        </nav>
-    </header>
+    <html-component src="./components/header.html"></html-component>
     <main>
         <section id="presentar">
-            <img src="./assets/images/bg.png" class="bg" alt="">
-            <div class="form-c" scroll-fade>
+            <!-- <html-component shadow-dom src="./components/bg-image.html" repeat="repeat" size="cover" imageurl="../assets/images/bg.png"></html-component> -->
+            <div class="form-c">
                 <form action="">
                     <div>
                         <input type="text" name="" id="" placeholder="Nombre del corto">
