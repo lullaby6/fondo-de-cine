@@ -23,36 +23,37 @@
     <html-component src="./components/header.html"></html-component>
     <main>
         <section id="presentar">
-            <!-- <html-component shadow-dom src="./components/bg-image.html" repeat="repeat" size="cover" imageurl="../assets/images/bg.png"></html-component> -->
-            <div class="form-c">
+                <html-component shadow-dom src="./components/bg-image.html" repeat="repeat" size="cover" imageurl="../assets/images/paper.png"></html-component>
                 <form action="">
-                    <div>
-                        <input type="text" name="" id="" placeholder="Nombre del corto">
-                        <input type="text" name="" id="" placeholder="Autor/Estudio">
+                    <div class="input-c">
+                        <div class="label-c">
+                            <label for="name">Nombre del corto</label>
+                            <input type="text" name="name" id="name" required placeholder="Nombre del corto...">
+                        </div>
+                        <div class="label-c">
+                            <label for="name">Nombre del autor/estudio</label>
+                            <input type="text" name="autor" id="autor" required placeholder="Autor/Estudio...">
+                        </div>
                     </div>
-                    <div>
-                        <input type="email" name="" id="" placeholder="Email de contacto">
-                        <input type="number" name="" id="" placeholder="Telefono de contacto">
+                    <div class="input-c">
+                        <div class="label-c">
+                            <label for="email">Email de contacto</label>
+                            <input type="email" name="email" id="email" required placeholder="Email...">
+                        </div>
+                        <div class="label-c">
+                            <label for="number">Numero de telefono (opcional)</label>
+                            <input type="number" name="number" id="number" placeholder="Numero de telefono...">
+                        </div>
                     </div>
-                    <input type="text" name="" id="" placeholder="Link del corto" required>
-                    <input type="submit" name="" id="" value="Enviar">
+                    <div class="label-c">
+                        <label for="link">Link del corto</label>
+                        <input type="text" name="link" id="link" placeholder="Link del corto..." required>
+                    </div>
+                    <!-- <input type="submit" name="" id="" value="Enviar"> -->
+                    <button>ENVIAR 📩</button>
                 </form>
-            </div>
         </section>
     </main>
-    <footer>
-        <section id="contact">
-            <div>
-                <h3>CONTACTANOS</h3>
-            </div>
-            <div>
-                <H3>REDES</H3>
-            </div>
-        </section>
-        <section id="copy">
-            <p>Copyright FONDO DE CINE - 2023. Todos los derechos reservados.</p>
-            <h3>Creado por <a href="https://github.com/lullaby6" target="_blank">Luciano Brumer</a>.</h3>
-        </section>
-    </footer>
+    <html-component src="./components/footer.html"></html-component>
 </body>
 </html>

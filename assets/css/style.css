@@ -247,18 +247,8 @@ main #presentar .title-c-c .title-c .corto-button {
     background-color: #FE3030;
 }
 
-main #presentar .form-c {
-    /* background-color: rgba(20, 20, 20, .25); */
-    border-top: 1px solid var(--border-low-color);
-    border-bottom: 1px solid var(--border-low-color);
-    padding: 50px;
-    /* width: 250px; */
-    width: 750px;
-    position: relative;
-    /* overflow: hidden; */
-}
-
-main #presentar .form-c form{
+main #presentar form{
+    font-family: Montserrat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -266,39 +256,90 @@ main #presentar .form-c form{
     gap: 5px;
     font-size: 25px;
     color: var(--text-important-color);
-    font-family: Montserrat;
-    width: 100%;
+    padding: 50px;
+    gap: 12.5px;
+    z-index: 100;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
-main #presentar .form-c form div{
+main #presentar form .input-c{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 5px;
+    gap: 25px;
 }
 
-main #presentar .form-c form input{
-    padding: 10px 50px;
+main #presentar form .label-c{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+main #presentar form label {
+    text-shadow: -.25px -.25px -.25px var(--text-color);
+    text-shadow: .25px .25px .25px var(--text-color);
+    opacity: .75;
+    font-size: 20px;
+}
+
+main #presentar form input{
+    padding: 10px 15px;
     border: none;
     width: 100%;
     border: 1px solid var(--border-color);
-    box-shadow: 5px 5px #6868684b;
+    width: 100%;
+    text-shadow: -.25px -.25px -.25px var(--text-color);
+    text-shadow: .25px .25px .25px var(--text-color);
+    background-color: transparent;
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+    -moz-appearance: textfield;
 }
 
-main #presentar .form-c form div input{
-    width: 50%;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-main #presentar .form-c form input:focus{
+main #presentar form input:focus{
     outline: none;
 }
 
-main #presentar .form-c form input[type="submit"]{
+main #presentar form button{
+    padding: 15px 0;
+    border: none;
+    width: 100%;
     cursor: pointer;
     background-color: #C389BC;
     color: var(--text-alt-color);
-    /* width: 100%; */
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background .125s ease-in-out, scale .1s ease-in-out;
+    -webkit-transition: background .125s ease-in-out, scale .1s ease-in-out;
+    -moz-transition: background .125s ease-in-out, scale .1s ease-in-out;
+    -ms-transition: background .125s ease-in-out, scale .1s ease-in-out;
+    -o-transition: background .125s ease-in-out, scale .1s ease-in-out;
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+}
+
+main #presentar form button:active {
+    scale: .95;
+}
+
+main #presentar form button:hover {
+    background-color: #9b6294;
 }
 
 main #nosotros {
@@ -334,45 +375,4 @@ main #nosotros .nosotros-c p {
     font-size: 20px;
     text-shadow: -.25px -.25px -.25px var(--text-color);
     text-shadow: .25px .25px .25px var(--text-color);
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid var(--border-color);
-}
-
-footer #contact {
-    padding: 50px 100px;
-    display: flex;
-    /* align-items: flex-end; */
-    justify-content: end;
-    width: 100%;
-    /* background-color: red; */
-    /* justify-content: ce; */
-    gap: 50px;
-    /* padding: 0 100px; */
-}
-
-footer #copy{
-    background-color: var(--text-important-color);
-    color: var(--text-alt-color);
-    padding: 25px;
-    font-size: 12.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2.5px;
-}
-
-footer #copy h3 {
-    font-weight: 100;
-    font-size: 10px;
-}
-
-footer #copy a {
-    color: var(--text-alt-color);
-    /* font-size: 12.5px; */
-    /* text-decoration: ; */
 }
