@@ -63,7 +63,12 @@ main #main {
     /* gap: 50px; */
 }
 
-main #main img {
+main #main .img-c {
+    background-color: #141414;
+    position: relative;
+}
+
+main #main .img-c img {
     width: 100vw;
     height: 90vh;
     /* opacity: .25; */

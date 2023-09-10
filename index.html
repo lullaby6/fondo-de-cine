@@ -14,6 +14,7 @@
     <script src="./assets/libs/extra-methods.js" defer></script>
     <script src="./assets/libs/html-component.js" defer></script>
     <script src="./assets/libs/scroll-fade.js" defer></script>
+    <script src="./assets/libs/scroll-reveal.js" defer></script>
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/main.js" defer></script>
@@ -22,7 +23,9 @@
     <html-component src="./components/header.html"></html-component>
     <main>
         <section id="main">
-            <html-component scroll-fade scroll-fade-duration="500" scroll-fade-onetime shadow-dom src="./components/bg-image.html" bgposition="center bottom" height="90vh" position="relative" repeat="repeat" size="cover" imageurl="../assets/images/0.jpg"></html-component>
+            <div class="img-c">
+                <html-component shadow-dom src="./components/bg-image.html" bgposition="center bottom" height="90vh" position="relative" repeat="repeat" size="cover" imageurl="../assets/images/0.webp"></html-component>
+            </div>
             <a href="#ediciones"><iconify-icon icon="ep:arrow-up" rotate="180deg" width="25"></iconify-icon></a>
         </section>
         <section id="ediciones">
