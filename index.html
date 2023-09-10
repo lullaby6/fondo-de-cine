@@ -22,7 +22,7 @@
     <html-component src="./components/header.html"></html-component>
     <main>
         <section id="main">
-            <html-component shadow-dom src="./components/bg-image.html" bgposition="center bottom" height="90vh" position="relative" repeat="repeat" size="cover" imageurl="../assets/images/0.jpg"></html-component>
+            <html-component scroll-fade scroll-fade-duration="500" scroll-fade-onetime shadow-dom src="./components/bg-image.html" bgposition="center bottom" height="90vh" position="relative" repeat="repeat" size="cover" imageurl="../assets/images/0.jpg"></html-component>
             <a href="#ediciones"><iconify-icon icon="ep:arrow-up" rotate="180deg" width="25"></iconify-icon></a>
         </section>
         <section id="ediciones">
@@ -76,13 +76,16 @@
         </section>
         <section id="nosotros">
             <html-component shadow-dom src="./components/bg-image.html" repeat="repeat" size="cover" imageurl="../assets/images/paper.png"></html-component>
-            <h2 scroll-fade scroll-fade-duration="500" scroll-fade-onetime>Sobre nosotros</h2>
-            <p scroll-fade scroll-fade-duration="500" scroll-fade-onetime>
-                Este proyecto nace con la idea de construir un espacio para ese cine independiente que normalmente no llega a las grandes pantallas.
-                Buscamos crear una comunidad que no solo apoye estos proyectos emergentes, sino también visibilizar que con una cámara y pasión por el arte se puede contar mucho. 
-                Consideramos que el cine independiente es un importante vínculo de interés social, cultural y necesario entre la gente. 
-                Por eso nuestra iniciativa es generar el encuentro para que todas las partes involucradas en las producciones tengan la oportunidad de proyectar sus obras. Construir un espacio colectivo que impulse esa llegada e incentive el desarrollo y creación de cortometrajes, que promuevan y enriquezcan el cine independiente.
-            </p>
+            <h2 scroll-fade scroll-fade-duration="750" scroll-fade-onetime>Sobre nosotros</h2>
+            <div class="nosotros-c">
+                <p scroll-fade scroll-fade-duration="750" scroll-fade-onetime>
+                    Este proyecto nace con la idea de construir un espacio para ese cine independiente que normalmente no llega a las grandes pantallas.
+                    Buscamos crear una comunidad que no solo apoye estos proyectos emergentes, sino también visibilizar que con una cámara y pasión por el arte se puede contar mucho. 
+                    Consideramos que el cine independiente es un importante vínculo de interés social, cultural y necesario entre la gente. 
+                    Por eso nuestra iniciativa es generar el encuentro para que todas las partes involucradas en las producciones tengan la oportunidad de proyectar sus obras. Construir un espacio colectivo que impulse esa llegada e incentive el desarrollo y creación de cortometrajes, que promuevan y enriquezcan el cine independiente.
+                </p>
+                <img scroll-fade scroll-fade-duration="750" scroll-fade-onetime src="./assets/images/ediciones/primera/fondo de cine-123.jpg" alt="">
+            </div>
         </section>
     </main>
     <footer>

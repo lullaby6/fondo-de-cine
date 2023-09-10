@@ -154,6 +154,7 @@ main #ediciones .edicion .c .text{
     gap: 12.5px;
     flex-direction: column;
     font-size: 20px;
+    text-shadow: 0px 0px 0px var(--text-color);
 }
 
 main #ediciones .edicion .c .text a{
@@ -298,21 +299,36 @@ main #presentar .form-c form input[type="submit"]{
 main #nosotros {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
-    padding: 0 175px;
-    gap: 20px;
+    padding: 0 100px;
+    gap: 10px;
+}
+
+main #nosotros .nosotros-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
     color: var(--text-color);
+    overflow: hidden;
+}
+
+main #nosotros .nosotros-c img {
+    width: 500px;
+    z-index: 100;
 }
 
 main #nosotros h2 {
     color: var(--text-important-color);
-    font-size: 45px;
+    font-size: 40px;
 }
 
-main #nosotros p {
-    font-size: 25px;
-    text-shadow: 0px 0px 0px var(--text-color);
+main #nosotros .nosotros-c p {
+    font-size: 20px;
+    text-shadow: -.25px -.25px -.25px var(--text-color);
+    text-shadow: .25px .25px .25px var(--text-color);
 }
 
 footer {
