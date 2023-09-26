@@ -5,22 +5,55 @@
         border-top: 1px solid var(--border-color);
     }
 
-    footer #contact {
-        padding: 50px 100px;
+    footer #top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 25px 100px;
+    }
+
+    footer #top #logo {
+        height: 100px;
+    }
+
+    footer #top #contact {
+        /* padding: 50px 100px; */
         display: flex;
         /* align-items: flex-end; */
-        justify-content: end;
-        width: 100%;
+        /* justify-content: end; */
+        /* width: 100%; */
         /* background-color: red; */
         /* justify-content: ce; */
         gap: 50px;
         /* padding: 0 100px; */
     }
 
+    footer #top #contact div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer #top #contact div a {
+        text-decoration: none;
+        color: var(--text-important-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        text-shadow: -.25px -.25px -.25px var(--text-important-color);
+        text-shadow: .25px .25px .25px var(--text-important-color);
+        transition: opacity .3 ease-in-out;
+    }
+
+    footer #top #contact div a:hover {
+        opacity: .5;
+    }
+
     footer #copy{
         background-color: var(--text-important-color);
         color: var(--text-alt-color);
-        padding: 25px;
+        padding: 12.5px 25px;
         font-size: 12.5px;
         display: flex;
         justify-content: center;
@@ -42,13 +75,18 @@
 </style>
 
 <footer>
-    <section id="contact">
-        <div>
-            <h3>CONTACTANOS</h3>
-        </div>
-        <div>
-            <H3>REDES</H3>
-        </div>
+    <section id="top">
+        <a href="."><img id="logo" src="./assets/images/logo.png" alt=""></a>
+        <section id="contact">
+            <div>
+                <h3>CONTACTANOS</h3>
+                <a href="mailto:fondodecine@gmail.com" target="_blank"><iconify-icon icon="ic:outline-email"></iconify-icon>fondodecine@gmail.com</a>
+            </div>
+            <div>
+                <H3>REDES</H3>
+                <a href="https://www.instagram.com/fondodecinefesti/" target="_blank"><iconify-icon icon="fe:instagram"></iconify-icon>Instagram</a>
+            </div>
+        </section>
     </section>
     <section id="copy">
         <p>Copyright FONDO DE CINE - 2023. Todos los derechos reservados.</p>
