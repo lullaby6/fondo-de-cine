@@ -353,6 +353,19 @@ main #nosotros {
     flex-direction: column;
     padding: 0 100px;
     gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+main #nosotros .absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+main #nosotros .absolute-0 {
+    /* background-color: red; */
+    translate: 50% 25%;
 }
 
 main #nosotros .nosotros-c{
