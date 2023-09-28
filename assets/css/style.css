@@ -434,6 +434,11 @@ main #nosotros .nosotros-c p {
         align-items: center;
     }
 
+    main #ediciones .ediciones-c .edicion h2 {
+        text-align: left;
+        width: 100%;
+    }
+
     main #ediciones .ediciones-c .edicion .c {
         flex-direction: column;
         align-items: center;
@@ -454,6 +459,10 @@ main #nosotros .nosotros-c p {
 }
 
 @media screen and (max-width: 480px){
+    main #ediciones .ediciones-c .edicion h2 {
+        /* text-align: center; */
+    }
+
     main #presentar .title-c-c .title-c a {
         font-size: 17.5px;
         padding: 17.5px 35px;
