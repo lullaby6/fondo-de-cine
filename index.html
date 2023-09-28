@@ -24,7 +24,15 @@
     <main>
         <section id="main">
             <div class="img-c">
-                <html-component shadow-dom src="./components/bg-image.html" bgposition="center bottom" height="90vh" position="relative" repeat="repeat" size="cover" imageurl="../assets/images/0.webp"></html-component>
+                <html-component shadow-dom src="./components/bg-image.html" bgposition="center bottom" height="90vh" position="relative" repeat="repeat" size="cover" imageurl="../assets/images/0.webp">
+                    <style>
+                        @media screen and (max-width: 640px){
+                            .bg-image {
+                                height: 80vh;
+                            }
+                        }
+                    </style>
+                </html-component>
             </div>
             <a href="#ediciones"><iconify-icon icon="ep:arrow-up" rotate="180deg" width="25"></iconify-icon></a>
         </section>

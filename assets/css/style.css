@@ -59,7 +59,7 @@ main #main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     /* gap: px; */
     /* gap: 50px; */
 }
@@ -427,6 +427,7 @@ main #nosotros .nosotros-c p {
 }
 
 @media screen and (max-width: 640px){
+
     main #ediciones .ediciones-c {
     }
 

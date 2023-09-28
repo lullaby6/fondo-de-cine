@@ -6,6 +6,7 @@ window.HTMLComponentRender = container => {
         let text = await res.text();
 
         HTMLComponent.setAttribute('children', HTMLComponent.innerHTML);
+        HTMLComponent.innerHTML = '';
 
         const propsRegex = /\{(\w+)\}/g;
 
