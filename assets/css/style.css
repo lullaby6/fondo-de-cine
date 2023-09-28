@@ -403,6 +403,10 @@ main #nosotros .nosotros-c p {
 }
 
 @media screen and (max-width: 768px){
+    main #ediciones {
+        padding: 50px;
+    }
+
     main #nosotros {
         padding: 25px 50px;
     }
@@ -423,6 +427,26 @@ main #nosotros .nosotros-c p {
 }
 
 @media screen and (max-width: 640px){
+    main #ediciones .ediciones-c {
+    }
+
+    main #ediciones .ediciones-c .edicion {
+        align-items: center;
+    }
+
+    main #ediciones .ediciones-c .edicion .c {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #ediciones .ediciones-c .edicion .c .slider {
+        width: 100%;
+    }
+
+    main #ediciones .ediciones-c .edicion .c .text {
+        width: 100%;
+    }
+
     main #presentar .title-c-c .title-c a {
         font-size: 25px;
         padding: 25px 50px;
