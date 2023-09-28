@@ -54,10 +54,20 @@
     header #logo {
         width: 50px;
     }
+
+    @media screen and (max-width: 768px){
+        header nav{
+            display: none;
+        }
+
+        header .logo{
+            display: none;
+        }
+    }
 </style>
 
 <header magic-header magic-header-delay="5000" magic-header-show-duration="375" magic-header-hide-duration="375">
-    <a href="."><img id="logo" src="./assets/images/logo.png" alt=""></a>
+    <a class="logo" href="."><img id="logo" src="./assets/images/logo.png" alt=""></a>
     <nav>
         <a>PROXIMA FECHA📆</a>
         <a href="/.#ediciones">EDICIONES📃</a>

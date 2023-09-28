@@ -18,6 +18,7 @@
 
 :root {
     --text-color: #2c2c2c;
+    --text-light-color:#444444;
     --text-important-color: #141414;
     --text-low-color: #525252;
     --text-alt-color: #fff;
@@ -371,7 +372,7 @@ main #nosotros .absolute-0 {
 main #nosotros .nosotros-c{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: row;
     gap: 50px;
     color: var(--text-color);
@@ -391,6 +392,56 @@ main #nosotros h2 {
 
 main #nosotros .nosotros-c p {
     font-size: 20px;
-    text-shadow: -.25px -.25px -.25px var(--text-color);
-    text-shadow: .25px .25px .25px var(--text-color);
+    font-weight: 600;
+    color: var(--text-light-color);
+}
+
+@media screen and (max-width: 1024px){
+    main #nosotros .nosotros-c {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    main #nosotros {
+        padding: 25px 50px;
+    }
+
+    main #nosotros h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    main #nosotros .nosotros-c {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    main #nosotros .nosotros-c img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    main #presentar .title-c-c .title-c a {
+        font-size: 25px;
+        padding: 25px 50px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    main #presentar .title-c-c .title-c a {
+        font-size: 17.5px;
+        padding: 17.5px 35px;
+    }
+
+    main #nosotros h2 {
+        font-size: 30px;
+    }
+
+    main #nosotros .nosotros-c p {
+        font-size: 17.5px;
+        text-shadow: none;
+        font-weight: 800;
+    }
 }
