@@ -353,7 +353,7 @@ main #nosotros {
     align-items: start;
     flex-direction: column;
     padding: 0 100px;
-    gap: 10px;
+    gap: 20px;
     position: relative;
     overflow: hidden;
 }
@@ -383,6 +383,8 @@ main #nosotros .nosotros-c img {
     width: 500px;
     z-index: 100;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 1);
+    /* margin-top: 100px; */
+    /* margin-right: 100px; */
 }
 
 main #nosotros h2 {
@@ -390,11 +392,27 @@ main #nosotros h2 {
     font-size: 40px;
 }
 
-main #nosotros .nosotros-c p {
+main #nosotros .nosotros-c .nosotros-t-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main #nosotros .nosotros-c .nosotros-t-c p {
     font-size: 20px;
     font-weight: 600;
     color: var(--text-light-color);
     min-width: 500px;
+}
+
+main #nosotros .nosotros-c .mobile-p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-light-color);
+    min-width: 500px;
+    display: none;
 }
 
 @media screen and (max-width: 1024px){
@@ -461,6 +479,16 @@ main #nosotros .nosotros-c p {
 
     main #nosotros .nosotros-c p {
         min-width: 250px;
+    }
+
+    main #nosotros .nosotros-c .mobile-hide-p {
+        /* min-width: 250px; */
+        display: none;
+    }
+
+    main #nosotros .nosotros-c .mobile-p {
+        min-width: 250px;
+        display: block;
     }
 }
 

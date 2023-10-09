@@ -161,20 +161,23 @@
 
     window.listenerMethods['hidenav'] = event => {
         const nav = event.target.parentNode
-        nav.hide()
+        const menuIcon = nav.parentNode.querySelector('.menu')
+        const menuIconDisplay = window.getComputedStyle(menuIcon).display
+        if(menuIconDisplay == 'block'){
+            nav.hide()
+        }
     }
 </script>
 
 <header magic-header magic-header-delay="5000" magic-header-show-duration="375" magic-header-hide-duration="375">
-    
-    <iconify-icon listener="click-dropdown" class="menu" width="50" icon="grommet-icons:menu"></iconify-icon>
+    <iconify-icon listener="click-dropdown" class="menu" width="30" icon="grommet-icons:menu"></iconify-icon>
     <a class="logo" href="."><img id="logo" src="./assets/images/logo.png" alt=""></a>
     <nav listener="load-navload">
         <div listener="click-hidenav" id="nav-overlay"></div>
         <a listener="click-hidenav">PROXIMA FECHA📆</a>
         <a listener="click-hidenav" href="/.#ediciones">EDICIONES📃</a>
         <a listener="click-hidenav" href="/.#presentar">PRESENTAR CORTO📩</a>
-        <!-- <a>APOYAR❤️</a> -->
+        <a listener="click-hidenav" href="/.#apoyar">APOYAR❤️</a>
     </nav>
 </header>
 
