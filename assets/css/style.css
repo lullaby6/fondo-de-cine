@@ -163,6 +163,14 @@ main #ediciones .edicion .c .text{
     text-shadow: 0px 0px 0px var(--text-color);
 }
 
+main #ediciones .edicion .c .text p {
+    /* font-weight: 600; */
+    /* font-size: 20px; */
+    /* font-weight: 600; */
+    text-shadow: .1px .1px .1px var(--text-color), -.1px -.1px -.1px var(--text-color);
+    /* color: var(--text-light-color); */
+}
+
 main #ediciones .edicion .c .text a{
     border: 1px solid var(--border-color);
     width: auto;
