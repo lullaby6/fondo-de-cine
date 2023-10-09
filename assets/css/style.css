@@ -394,6 +394,7 @@ main #nosotros .nosotros-c p {
     font-size: 20px;
     font-weight: 600;
     color: var(--text-light-color);
+    min-width: 500px;
 }
 
 @media screen and (max-width: 1024px){
@@ -456,6 +457,10 @@ main #nosotros .nosotros-c p {
     main #presentar .title-c-c .title-c a {
         font-size: 25px;
         padding: 25px 50px;
+    }
+
+    main #nosotros .nosotros-c p {
+        min-width: 250px;
     }
 }
 
