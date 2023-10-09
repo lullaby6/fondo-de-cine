@@ -412,6 +412,7 @@ main #nosotros .nosotros-c .nosotros-t-c p {
     font-size: 20px;
     font-weight: 600;
     color: var(--text-light-color);
+    /* text-shadow: .25px .25px .25px var(--text-color), -.25px -.25px -.25px var(--text-color); */
     min-width: 500px;
 }
 
@@ -486,7 +487,7 @@ main #nosotros .nosotros-c .mobile-p {
     }
 
     main #nosotros .nosotros-c p {
-        min-width: 250px;
+        /* min-width: 250px; */
     }
 
     main #nosotros .nosotros-c .mobile-hide-p {
@@ -495,7 +496,7 @@ main #nosotros .nosotros-c .mobile-p {
     }
 
     main #nosotros .nosotros-c .mobile-p {
-        min-width: 250px;
+        /* min-width: 250px; */
         display: block;
     }
 }
@@ -514,9 +515,20 @@ main #nosotros .nosotros-c .mobile-p {
         font-size: 30px;
     }
 
-    main #nosotros .nosotros-c p {
+    main #nosotros .nosotros-c .nosotros-t-c p {
         font-size: 17.5px;
         text-shadow: none;
         font-weight: 800;
+        min-width: 100%;
+        /* width: 100%; */
     }
+
+    main #nosotros .nosotros-c .mobile-p {
+        min-width: 100%;
+        /* width: 100%; */
+    }
+    
+    /* main #nosotros .nosotros-c img{
+        width: 50%;
+    } */
 }
