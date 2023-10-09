@@ -65,7 +65,8 @@ window.HTMLComponentRender = container => {
         listenerElement.getAttribute('listener').split(' ').forEach(listener => {
             const [eventName, methodName] = listener.split('-')
             if(eventName == 'load') {
-                listenerMethods[methodName](listenerElement.dispatchEvent(new Event('load')))
+                listenerElement.addEventListener('load', event => listenerMethods[methodName](event))
+                listenerElement.dispatchEvent(new Event('load'))
             }else{
                 listenerElement.addEventListener(eventName, event => listenerMethods[methodName](event))
             }

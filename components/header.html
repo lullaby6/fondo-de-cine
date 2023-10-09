@@ -20,6 +20,8 @@
         justify-content: center;
         align-items: center;
 
+        position: relative;
+
         gap: 30px;
     }
 
@@ -55,23 +57,123 @@
         width: 50px;
     }
 
+    header .menu {
+        display: none;
+    }
+
+    header nav #nav-overlay {
+        display: none;
+    }
+
     @media screen and (max-width: 768px){
-        header nav{
+        header .logo{
             display: none;
         }
 
-        header .logo{
+        header {
+            justify-content: start;
+            align-items: start;
+            padding: 5px 10px;
+            flex-direction: column;
+            background-color: rgba(20, 20, 20, .5);
+        }
+
+        header nav{
             display: none;
+            flex-direction: column;
+            height: 50vh;
+            width: 100%;
+        }
+
+        header nav a {
+            font-size: 37.5px;
+        }
+
+        header .menu {
+            display: block;
+            color: var(--text-alt-color);
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 640px){
+        header nav a {
+            font-size: 25px;
+        }
+
+        header nav #nav-overlay {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            /* background-color: rgb(255, 0, 0, .5); */
         }
     }
 </style>
 
+<script>
+    window.listenerMethods['navload'] = event => {
+        const nav = event.target
+        const icon = event.target.parentNode.querySelector('.menu')
+
+        nav.show = () => {
+            clearTimeout(nav.hideTimeout)
+            nav.style.display = 'flex'
+            nav.animate([
+                {height: 0, opacity: 0},
+                {height: '50vh', opacity: 1}
+            ], {
+                duration: 300,
+                fill: 'forwards',
+                ease: 'ease-in-out'
+            })
+            nav.visible = true
+            icon.setAttribute('icon', 'material-symbols:close')
+        }
+
+        nav.hide = () => {
+            nav.animate([
+                {height: '50vh', opacity: 1},
+                {height: 0, opacity: 0}
+            ], {
+                duration: 300,
+                fill: 'forwards',
+                ease: 'ease-in-out'
+            })
+            nav.visible = false
+            nav.hideTimeout = setTimeout(() => {
+                nav.style.display = 'none'
+            }, 300)
+            icon.setAttribute('icon', 'grommet-icons:menu')
+        }
+    }
+
+    window.listenerMethods['dropdown'] = event => {
+        const nav = event.target.parentNode.querySelector('nav')
+        if(nav.visible == undefined || nav.visible == false){
+            nav.show()
+        }else if(nav.visible == true){
+            nav.hide()
+        }
+    }
+
+    window.listenerMethods['hidenav'] = event => {
+        const nav = event.target.parentNode
+        nav.hide()
+    }
+</script>
+
 <header magic-header magic-header-delay="5000" magic-header-show-duration="375" magic-header-hide-duration="375">
+    
+    <iconify-icon listener="click-dropdown" class="menu" width="50" icon="grommet-icons:menu"></iconify-icon>
     <a class="logo" href="."><img id="logo" src="./assets/images/logo.png" alt=""></a>
-    <nav>
-        <a>PROXIMA FECHA📆</a>
-        <a href="/.#ediciones">EDICIONES📃</a>
-        <a href="/.#presentar">PRESENTAR CORTO📩</a>
+    <nav listener="load-navload">
+        <div listener="click-hidenav" id="nav-overlay"></div>
+        <a listener="click-hidenav">PROXIMA FECHA📆</a>
+        <a listener="click-hidenav" href="/.#ediciones">EDICIONES📃</a>
+        <a listener="click-hidenav" href="/.#presentar">PRESENTAR CORTO📩</a>
         <!-- <a>APOYAR❤️</a> -->
     </nav>
 </header>
