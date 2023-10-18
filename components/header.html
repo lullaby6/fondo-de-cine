@@ -114,7 +114,7 @@
 </style>
 
 <script>
-    window.listenerMethods['navload'] = event => {
+    window.HTMLComponentProps['navload'] = event => {
         const nav = event.target
         const icon = event.target.parentNode.querySelector('.menu')
 
@@ -150,7 +150,7 @@
         }
     }
 
-    window.listenerMethods['dropdown'] = event => {
+    window.HTMLComponentProps['dropdown'] = event => {
         const nav = event.target.parentNode.querySelector('nav')
         if(nav.visible == undefined || nav.visible == false){
             nav.show()
@@ -159,7 +159,7 @@
         }
     }
 
-    window.listenerMethods['hidenav'] = event => {
+    window.HTMLComponentProps['hidenav'] = event => {
         const nav = event.target.parentNode
         const menuIcon = nav.parentNode.querySelector('.menu')
         const menuIconDisplay = window.getComputedStyle(menuIcon).display
