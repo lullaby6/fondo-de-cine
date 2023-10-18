@@ -133,22 +133,27 @@
             icon.setAttribute('icon', 'material-symbols:close')
         }
 
-        nav.hide = () => {
+        nav.hide = (duration) => {
             nav.animate([
                 {height: '50vh', opacity: 1},
                 {height: 0, opacity: 0}
             ], {
-                duration: 300,
+                duration: duration || 300,
                 fill: 'forwards',
                 ease: 'ease-in-out'
             })
             nav.visible = false
             nav.hideTimeout = setTimeout(() => {
                 nav.style.display = 'none'
-            }, 300)
+            }, duration || 300)
             icon.setAttribute('icon', 'grommet-icons:menu')
         }
     }
+
+    window.addEventListener('scroll', e => {
+        const nav = document.querySelector('nav')
+        nav.hide(500)
+    })
 
     window.HTMLComponentProps['dropdown'] = event => {
         const nav = event.target.parentNode.querySelector('nav')
