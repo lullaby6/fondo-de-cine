@@ -152,7 +152,7 @@
 
     window.addEventListener('scroll', e => {
         const nav = document.querySelector('nav')
-        nav.hide(500)
+        if(window.getComputedStyle(nav).flexDirection == 'column') nav.hide(500)
     })
 
     window.HTMLComponentProps['dropdown'] = event => {
