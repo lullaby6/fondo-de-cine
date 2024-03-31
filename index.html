@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,114 +7,144 @@
     <title>FONDO DE CINE - Festival de CINE recontra independiente 🎬</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/logo.png">
 
-    <link rel="stylesheet" href="./assets/libs/normalize.css">
-    <script src="./assets/libs/iconify-icon.min.js" defer></script>
-    <script src="./assets/libs/slider.js" defer></script>
-    <script src="./assets/libs/mouse-parallax.js" defer></script>
-    <script src="./assets/libs/extra-methods.js" defer></script>
-    <script src="./assets/libs/html-component.js" defer></script>
-    <script src="./assets/libs/scroll-fade.js" defer></script>
-    <script src="./assets/libs/scroll-reveal.js" defer></script>
+    <script src="./assets/libs/js/iconify-2.0.0.js" defer></script>
+    <script src="./assets/libs/js/alpine-3.13.7.js" defer></script>
+    <script src="./assets/libs/js/tailwind-3.4-3.js" defer></script>
+    <!-- <script src="./assets/libs/js/smooth-scrollbar-8.8.4.js" defer></script> -->
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/libs/css/normalize.css">
+    <link rel="stylesheet" href="./assets/libs/css/reset.css">
+
     <script src="./assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    <html-c src="./components/header.html"></html-c>
+<body class="text-neutral-800 w-full h-screen">
+    <header class="fixed top-0 left-0 w-full flex justify-end items-center h-16 bg-black bg-opacity-40 px-36 z-10 shadow">
+        <nav class="flex justify-center items-center gap-8 hidden sm:flex">
+            <!-- <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer">PROXIMA FECHA📆</a> -->
+            <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/.#ediciones">EDICIONES📃</a>
+            <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/.#presentar">PRESENTAR CORTO📩</a>
+            <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/.#apoyar">APOYAR❤️</a>
+        </nav>
+    </header>
+
     <main>
-        <section id="main">
-            <div class="img-c">
-                <html-c shadow-dom src="./components/bg-image.html" bgposition="center top" height="90vh" position="relative" repeat="repeat" size="cover" imageurl="../assets/images/ediciones/primera/1.webp">
-                    <style>
-                        /* @media screen and (max-width: 640px){
-                            .bg-image {
-                                height: 80vh;
-                            }
-                        } */
-                    </style>
-                </html-c>
+        <section class="w-full h-screen flex justify-center sm:justify-start items-center gap-8 px-0 sm:px-36">
+            <div class="bg-black w-full h-screen fixed left-0 top-0">
+                <img class="blur-sm w-full h-full object-cover" src="./assets/images/ediciones/primera/1.webp">
             </div>
-            <a href="#ediciones"><iconify-icon icon="ep:arrow-up" rotate="180deg" width="25"></iconify-icon></a>
+            
+            <div class="w-full flex flex-col gap-2 justify-center sm:items-start items-center">
+                <div class="flex justify-start items-center gap-4">
+                    <img class="w-10 h-10 aspect-square" src="./assets/images/logo.png" alt="">
+                    <h1 class="text-nowrap text-neutral-200 text-4xl sm:text-5xl font-semibold">FONDO DE CINE</h1>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-neutral-300 text-2xl text-center sm:text-left">Festival de CINE recontra independiente 🎬</h1>
+                    <h2 class="text-neutral-400 text-xl text-center sm:text-left">Proximamente tercera edición!</h2>
+                </div>
+            </div>
+
+            <a href="#ediciones" class="absolute left-1/2 -translate-x-full bottom-2 text-neutral-200 opacity-50 transition-opacity hover:opacity-100 text-4xl">
+                <iconify-icon icon="iconamoon:arrow-down-2-light"></iconify-icon>
+            </a>
         </section>
-        <section id="ediciones">
-            <h1>EDICIONES</h1>
-            <div class="ediciones-c">
-                <div class="edicion">
-                    <h2>PRIMERA EDICION</h2>
-                    <!-- <h2>PRIMERA EDICION Nº 1</h2> -->
-                    <div class="c">
-                        <div class="slider" slider slider-autoplay slider-autoplay-delay="3000" slider-click>
-                            <img src="./assets/images/ediciones/primera/0.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/1.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/34.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/35.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/36.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/38.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/2.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/3.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/4.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/5.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/6.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/7.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/8.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/9.webp" slider-item alt="">
-                            <img src="./assets/images/ediciones/primera/10.webp" slider-item alt="">
+
+        <section id="ediciones" class="bg-neutral-200 min-h-screen flex flex-col justify-start items-start gap-8 px-10 sm:px-36 py-24">
+            <h1 class="text-4xl w-full border-b border-neutral-400 pb-2">EDICIONES</h1>
+
+            <div class="flex flex-col gap-16">
+
+                <div class="w-full flex flex-col gap-6 border-b border-neutral-400 pb-6">
+                    <a class="flex items-center justify-start gap-2 transition-all hover:pl-2 cursor-pointer border-b border-neutral-400 pb-1" href="/primera-edicion.html">
+                        <h1 class="text-2xl flex items-center gap-1">PRIMERA EDICIÓN</iconify-icon></h1>
+                        <iconify-icon icon="tabler:external-link" width="16" height="16"></iconify-icon>
+                    </a>
+                    <div class="w-full flex flex-col sm:flex-row gap-6">
+                        <div 
+                            class="w-full sm:w-1/2 aspect-video" 
+                            
+                            x-data="{ index: 1, timeout: null }" 
+                            x-init="timeout = setInterval(() => index++, 2500)"
+                            x-on:click="index++; clearTimeout(timeout); timeout = setTimeout(() => index = 1, 2500)"
+                        >
+                            <template x-for="i in 37">
+                                <img 
+                                    class="w-full h-full aspect-video object-cover absolute left-0 top-0 cursor-pointer shadow"   
+                                    
+                                    x-transition.opacity.duration.1000ms
+    
+                                    x-show="i == index" 
+                                    x-on:error="index = 0" 
+                                    x-bind:src="'./assets/images/ediciones/primera/'+i+'.webp'" 
+    
+                                    loading="lazy"
+                                >
+                            </template>
                         </div>
-                        <div class="text">
-                            <p>
-                                La primera edición de "Fondo de Cine" se hizo en "La Estación de los Deseos", un espacio emblemático que sirve como centro social y apoyo a la cultura barrial de Caballito, un verdadero pulmón verde que muchxs desconocen. Durante el evento, se proyectaron una variedad de cortometrajes como "Afuera es Peligroso", "Lago Puelo", "El Cumpleaños N 68 de la Tortuga Carmela", "Cómo una Ráfaga de Viento", entre otros. Siempre buscando una variedad de generos audiovisuales.
-Si te gusta esta movida te esperamos en la 2da edicion para que apoyemos y difundamos el cine independiente y de paso te inspires un poquito!
+                        <div class="w-full sm:w-1/2 flex flex-col gap-2 justify-center items-center sm:items-start">
+                            <p class="text-lg">
+                                La primera edición de "Fondo de Cine" se hizo en "La Estación de los Deseos", un espacio emblemático que sirve como centro social y apoyo a la cultura barrial de Caballito, un verdadero pulmón verde que muchxs desconocen. Durante el evento, se proyectaron una variedad de cortometrajes como "Afuera es Peligroso", "Lago Puelo", "El Cumpleaños N 68 de la Tortuga Carmela", "Cómo una Ráfaga de Viento", entre otros. Siempre buscando una variedad de generos audiovisuales. Si te gusta esta movida te esperamos en la 2da edicion para que apoyemos y difundamos el cine independiente y de paso te inspires un poquito!
                             </p>
-                            <a>Ver mas...</a>
+                            <a class="text-lg border border-neutral-500 px-2 py-[0.5px] transition-transform hover:translate-x-2 shadow-[5px_5px_#6868684b]" href="/primera-edicion.html">Ver mas...</a>
                         </div>
                     </div>
                 </div>
-                <div class="edicion">
-                    <h2>SEGUNDA EDICION - Proximamente...</h2>
+
+                <div class="w-full flex flex-col gap-6">
+                    <a class="flex items-center justify-start gap-2 border-b border-neutral-400 pb-1">
+                        <h1 class="text-2xl flex items-center gap-1">TERCERA EDICIÓN - Proximamente...</iconify-icon></h1>
+                    </a>
                 </div>
             </div>
         </section>
-        <section id="presentar">
-            <html-c shadow-dom src="./components/bg-image.html" repeat="repeat" size="cover" imageurl="../assets/images/bg.webp"></html-c>
-            <div class="title-c-c">
-                <div class="title-c">
-                    <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="3">Queres</a>
-                    <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="3">Proyectar</a>
+
+        <section id="presentar" class="h-screen flex justify-start items-center gap-8 px-36">
+            <img class="w-full h-full absolute left-0 top-0 object-cover" src="./assets/images/bg.webp">
+            <div class="font-sceageus text-xl sm:text-4xl w-full h-full flex flex-col gap-4 justify-center items-center">
+                <div class="flex gap-4">
+                    <a class="px-10 py-5 bg-violet-400 shadow-xl transition-transform hover:scale-[1.125] hover:z-10" href="#presentar">¿QUERES</a>
+                    <a class="px-10 py-5 bg-neutral-200 shadow-xl transition-transform hover:scale-[1.125] hover:z-10" href="#presentar">PROYECTAR</a>
                 </div>
-                <div class="title-c">
-                    <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="3">Tu</a>
-                    <a href="/presentar.html" class="presentar-random-color corto-button" mouse-parallax mouse-parallax-strength="3">Corto</a>
-                    <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="4">En</a>
+                <div class="flex gap-4">
+                    <a class="px-10 py-5 bg-neutral-200 shadow-xl transition-transform hover:scale-[1.125] hover:z-10" href="#presentar">TU</a>
+                    <a class="px-10 py-5 bg-red-500 shadow-xl transition-transform hover:scale-[1.125] hover:z-10" href="#presentar">CORTO</a>
+                    <a class="px-10 py-5 bg-orange-300 shadow-xl transition-transform hover:scale-[1.125] hover:z-10" href="#presentar">EN</a>
                 </div>
-                <div class="title-c">
-                    <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="3">Nuestro</a>
-                    <a href="/presentar.html" class="presentar-random-color" mouse-parallax mouse-parallax-strength="4">Festi?</a>
+                <div class="flex gap-4">
+                    <a class="px-10 py-5 bg-indigo-200 shadow-xl transition-transform hover:scale-[1.125] hover:z-10" href="#presentar">NUESTRO</a>
+                    <a class="px-10 py-5 bg-teal-400 shadow-xl transition-transform hover:scale-[1.125] hover:z-10" href="#presentar">FESTI?</a>
                 </div>
-            </div>
-        </section>
-        <section id="nosotros">
-            <html-c shadow-dom src="./components/bg-image.html" repeat="repeat" size="cover" imageurl="../assets/images/paper.png"></html-c>
-            <img src="./assets/images/forms/0.png" alt="" class="absolute absolute-0">
-            <h2 scroll-fade scroll-fade-duration="750" scroll-fade-onetime>Sobre nosotros 🎬</h2>
-            <div class="nosotros-c">
-                <div class="nosotros-t-c">
-                    <p scroll-fade scroll-fade-duration="750" scroll-fade-onetime>
-                        Este proyecto nace con la idea de construir un espacio para ese <u>cine independiente</u> que normalmente no llega a las grandes pantallas.
-                        Buscamos crear una comunidad que no solo apoye estos proyectos emergentes, sino también visibilizar que con una cámara y pasión por el arte se puede contar mucho.
-                    </p>
-                    <p scroll-fade scroll-fade-duration="750" scroll-fade-onetime class="mobile-hide-p">
-                        Consideramos que el cine independiente es un importante vínculo de interés social, cultural y necesario entre la gente.
-                        Por eso nuestra iniciativa es generar el encuentro para que todas las partes involucradas en las producciones tengan la oportunidad de proyectar sus obras. Construir un espacio colectivo que <u>impulse esa llegada e incentive el desarrollo y creación de cortometrajes</u>, que promuevan y enriquezcan el cine independiente.
-                    </p>
-                </div>
-                <img scroll-fade scroll-fade-duration="750" scroll-fade-onetime src="./assets/images/ediciones/primera/nosotros.webp" alt="">
-                <p scroll-fade scroll-fade-duration="750" scroll-fade-onetime class="mobile-p">
-                    Consideramos que el cine independiente es un importante vínculo de interés social, cultural y necesario entre la gente.
-                    Por eso nuestra iniciativa es generar el encuentro para que todas las partes involucradas en las producciones tengan la oportunidad de proyectar sus obras. Construir un espacio colectivo que <u>impulse esa llegada e incentive el desarrollo y creación de cortometrajes</u>, que promuevan y enriquezcan el cine independiente.
-                </p>
             </div>
         </section>
     </main>
-    <html-c src="./components/footer.html"></html-c>
+
+    <footer class="border-t border-neutral-400">
+        <section class="bg-neutral-100 px-36 py-4 flex justify-between items-center">
+            <img class="w-28 h-28 aspect-square hidden sm:block" src="./assets/images/logo.png" alt="">
+
+            <div class="flex flex-col sm:flex-row gap-6 h-full justify-center items-center sm:items-start">
+                <div class="flex flex-col w-full sm:w-fit items-center justify-center sm:items-start">
+                    <h3 class="font-semibold text-xl">CONTACTANOS</h3>
+                    <a class="flex justify-center items-center gap-1 opacity-50 transition-opacity hover:opacity-100 hover:underline" href="mailto:fondodecine@gmail.com" target="_blank">
+                        <iconify-icon class="top-0.5" icon="ic:outline-email"></iconify-icon>
+                        <p>fondodecine@gmail.com</p>
+                    </a>
+                </div>
+                <div class="flex flex-col w-full sm:w-fit items-center justify-center sm:items-start">
+                    <h3 class="font-semibold text-xl">REDES</h3>
+                    <a class="flex justify-center items-center gap-1 opacity-50 transition-opacity hover:opacity-100 hover:underline" href="https://www.instagram.com/fondodecinefesti/" target="_blank">
+                        <iconify-icon class="top-0.5" icon="fe:instagram"></iconify-icon>
+                        <p>Instagram</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-neutral-900 text-neutral-200 py-2 px-2 flex flex-col items-center justify-center gap-1.5 sm:gap-0.5">
+            <p class="text-sm text-center">Copyright FONDO DE CINE - 2024. Todos los derechos reservados.</p>
+            <h3 class="text-xs">Creado por <a href="https://github.com/lullaby6" target="_blank" class="underline">Lullaby6</a>.</h3>
+        </section>
+    </footer>
 </body>
 </html>

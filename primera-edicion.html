@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONDO DE CINE - Primera edición 🎬</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.png">
+
+    <script src="./assets/libs/js/iconify-2.0.0.js" defer></script>
+    <script src="./assets/libs/js/alpine-3.13.7.js" defer></script>
+    <script src="./assets/libs/js/tailwind-3.4-3.js" defer></script>
+    <!-- <script src="./assets/libs/js/smooth-scrollbar-8.8.4.js" defer></script> -->
+
+    <link rel="stylesheet" href="./assets/libs/css/normalize.css">
+    <link rel="stylesheet" href="./assets/libs/css/reset.css">
+
+    <script src="./assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="text-neutral-800 w-full h-screen pt-16">
+    <header class="fixed top-0 left-0 w-full flex justify-end items-center h-16 bg-black bg-opacity-40 px-36 z-10 shadow">
+        <nav class="flex justify-center items-center gap-8 hidden sm:flex">
+            <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/.">INICIO 🏠</a>
+            <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/primera-edicion.html#info">INFORMACION 📋</a>
+            <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/primera-edicion.html#cortos">CORTOS 🎬</a>
+            <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/primera-edicion.html#galeria">GALERIA 📸</a>
+        </nav>
+    </header>
+
+    <main class="w-full min-h-screen flex flex-col justify-center sm:justify-start items-center gap-8 px-10 sm:px-36">
+        <img class="w-screen h-screen fixed left-0 top-0 object-cover" src="./assets/images/paper.png">
+        <div class="w-screen h-screen fixed left-0 top-0 bg-black bg-opacity-20"></div>
+
+        <section id="info" class="w-full h-1/2 relative flex flex-col gap-4 py-10">
+            <h1 class="text-4xl w-full border-b border-neutral-400 pb-2">INFORMACIÓN 📋</h1>
+        </section>
+
+        <section id="cortos" class="w-full h-1/2 relative flex flex-col gap-4 py-10">
+            <h1 class="text-4xl w-full border-b border-neutral-400 pb-2">CORTOS 🎬</h1>
+        </section>
+
+        <section 
+            id="galeria"
+            class="w-full min-h-screen relative flex flex-col gap-4 py-10"
+
+            x-data="{modal: false, src: './assets/images/logo.png'}"
+        >
+            <div 
+                class="w-screen h-screen fixed top-0 left-0 bg-black bg-opacity-75 z-20 flex justify-center items-center"
+            
+                x-show="modal"
+                x-transition.opacity.duration.600ms
+                x-on:click="modal = false"
+            >
+                <img class="w-3/4 sm:w-1/2" x-bind:src="src">
+            </div>
+
+            <h1 class="text-4xl w-full border-b border-neutral-400 pb-2">GALERIA 📸</h1>
+
+            <div 
+                class="w-full columns-2 sm:columns-4 gap-x-4"
+                
+                x-data="{ index: 1, timeout: null }" 
+                x-init="timeout = setInterval(() => index++, 2500)"
+                x-on:click="index++; clearTimeout(timeout); timeout = setTimeout(() => index = 1, 2500)"
+            >
+                <template x-for="i in 37">
+                    <img 
+                        class="w-full object-cover cursor-pointer shadow mb-4 transition-transform hover:scale-[1.05]"   
+                        
+                        x-transition.opacity.duration.1000ms
+
+                        x-on:error="index = 0" 
+                        x-on:click="modal = true; src = './assets/images/ediciones/primera/'+i+'.webp'"
+                        x-bind:src="'./assets/images/ediciones/primera/'+i+'.webp'" 
+
+                        loading="lazy"
+                    >
+                </template>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-neutral-400">
+        <section class="bg-neutral-100 px-36 py-4 flex justify-between items-center">
+            <img class="w-28 h-28 aspect-square hidden sm:block" src="./assets/images/logo.png" alt="">
+
+            <div class="flex flex-col sm:flex-row gap-6 h-full justify-center items-center sm:items-start">
+                <div class="flex flex-col w-full sm:w-fit items-center justify-center sm:items-start">
+                    <h3 class="font-semibold text-xl">CONTACTANOS</h3>
+                    <a class="flex justify-center items-center gap-1 opacity-50 transition-opacity hover:opacity-100 hover:underline" href="mailto:fondodecine@gmail.com" target="_blank">
+                        <iconify-icon class="top-0.5" icon="ic:outline-email"></iconify-icon>
+                        <p>fondodecine@gmail.com</p>
+                    </a>
+                </div>
+                <div class="flex flex-col w-full sm:w-fit items-center justify-center sm:items-start">
+                    <h3 class="font-semibold text-xl">REDES</h3>
+                    <a class="flex justify-center items-center gap-1 opacity-50 transition-opacity hover:opacity-100 hover:underline" href="https://www.instagram.com/fondodecinefesti/" target="_blank">
+                        <iconify-icon class="top-0.5" icon="fe:instagram"></iconify-icon>
+                        <p>Instagram</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-neutral-900 text-neutral-200 py-2 px-2 flex flex-col items-center justify-center gap-1.5 sm:gap-0.5">
+            <p class="text-sm text-center">Copyright FONDO DE CINE - 2024. Todos los derechos reservados.</p>
+            <h3 class="text-xs">Creado por <a href="https://github.com/lullaby6" target="_blank" class="underline">Lullaby6</a>.</h3>
+        </section>
+    </footer>
+</body>
+</html>
