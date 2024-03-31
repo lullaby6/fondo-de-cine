@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+
+import { Icon } from 'astro-icon/components'
+---
+
+<footer class="border-t border-neutral-400">
+    <section class="bg-neutral-100 px-36 py-4 flex justify-between items-center">
+        <Image class="w-28 h-28 aspect-square hidden sm:block" src="/assets/images/logo.webp" width={1} height={1} alt=""/>
+
+        <div class="flex flex-col sm:flex-row gap-6 h-full justify-center items-center sm:items-start">
+            <div class="flex flex-col w-full sm:w-fit items-center justify-center sm:items-start">
+                <h3 class="font-semibold text-xl">CONTACTANOS</h3>
+                <a class="flex justify-center items-center gap-1 opacity-50 transition-opacity hover:opacity-100 hover:underline" href="mailto:fondodecine@gmail.com" target="_blank">
+                    <Icon class="top-0.5" name="ic:outline-email"/>
+                    <p>fondodecine@gmail.com</p>
+                </a>
+            </div>
+            <div class="flex flex-col w-full sm:w-fit items-center justify-center sm:items-start">
+                <h3 class="font-semibold text-xl">REDES</h3>
+                <a class="flex justify-center items-center gap-1 opacity-50 transition-opacity hover:opacity-100 hover:underline" href="https://www.instagram.com/fondodecinefesti/" target="_blank">
+                    <Icon class="top-0.5" name="fe:instagram"/>
+                    <p>Instagram</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-neutral-900 text-neutral-200 py-2 px-2 flex flex-col items-center justify-center gap-1.5 sm:gap-0.5">
+        <p class="text-sm text-center">Copyright FONDO DE CINE - 2024. Todos los derechos reservados.</p>
+        <h3 class="text-xs">Creado por <a href="https://github.com/lullaby6" target="_blank" class="underline">Lullaby6</a>.</h3>
+    </section>
+</footer>

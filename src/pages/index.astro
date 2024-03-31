@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+import Inicio from '../sections/inicio/Inicio.astro';
+import Ediciones from '../sections/inicio/Ediciones.astro';
+import Presentar from '../sections/inicio/Presentar.astro';
+---
+
+<Layout title="FONDO DE CINE - Festival de CINE independiente 🎬">
+    <Header>
+        <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/.#ediciones">EDICIONES📃</a>
+        <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/.#presentar">PRESENTAR CORTO📩</a>
+        <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/.#apoyar">APOYAR❤️</a>
+    </Header>
+
+    <main class="w-full min-h-screen flex flex-col">
+      <Inicio/>
+
+      <Ediciones/>
+
+      <Presentar/>
+    </main>
+
+	<Footer/>
+</Layout>

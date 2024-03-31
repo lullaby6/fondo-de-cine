@@ -1,0 +1,56 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/assets/images/logo.webp">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="text-neutral-800 w-full h-screen">
+		<slot />
+	</body>
+</html>
+<style is:global>
+	*, html, body {
+		scroll-behavior: smooth !important;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		position: relative;
+		min-width: 0;
+	}
+
+	body {
+		min-height: 100dvh;
+	}
+
+	h1, h2, h3, h4 {
+		text-wrap: balance;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+
+	@font-face {
+		font-family: "Sceageus";
+		src: url("/assets/fonts/Sceageus.otf") format("opentype");
+	}
+
+	.font-sceageus {
+		font-family: "Sceageus", sans-serif;
+	}
+</style>

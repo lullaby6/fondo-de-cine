@@ -1,0 +1,51 @@
+---
+interface Props {
+	title: string;
+	desc: string;
+    images: number;
+    href: string
+    images_path: string
+}
+
+const { title, desc, images, href, images_path } = Astro.props;
+
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="w-full flex flex-col gap-6 border-b border-neutral-400 pb-6">
+    <a class="flex items-center justify-start gap-2 transition-all hover:pl-2 cursor-pointer border-b border-neutral-400 pb-1" href={href}>
+        <h1 class="text-2xl flex items-center gap-1">{title}</h1>
+        <Icon name="tabler:external-link"/>
+    </a>
+
+    <div class="w-full flex flex-col sm:flex-row gap-6">
+        <div 
+            class="w-full sm:w-1/2 aspect-video" 
+            
+            x-data="{ image_index: 0, timeout: null }" 
+            x-init="timeout = setInterval(() => image_index++, 1200)"
+            x-on:click="image_index++; clearTimeout(timeout); timeout = setTimeout(() => image_index++, 1200)"
+        >
+            {Array.from(Array(images).keys()).map(index => (
+                <img 
+                    class="w-full h-full aspect-video object-cover absolute left-0 top-0 cursor-pointer shadow"   
+                    
+                    x-data=`{image: ${index}}`
+                    x-show="image_index == image" 
+                    x-on:error="image_index = 0" 
+                    x-bind:src=`'${images_path}${index}.webp'`
+                    x-transition.opacity.duration.600ms
+
+                    loading="lazy"
+                    decoding="async"
+                >
+            ))}
+        </div>
+        <div class="w-full sm:w-1/2 flex flex-col gap-2 justify-center items-center sm:items-start">
+            <p class="text-lg">
+                {desc}
+            </p>
+            <a class="text-lg border border-neutral-500 px-2 py-[0.5px] transition-transform hover:translate-x-2 shadow-[5px_5px_#6868684b]" href={href}>Ver mas...</a>
+        </div>
+    </div>
+</div>

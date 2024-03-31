@@ -1,8 +1,0 @@
-@font-face {
-    font-family: "Sceageus";
-    src: url("../fonts/Sceageus.otf") format("opentype");
-}
-
-.font-sceageus {
-    font-family: "Sceageus", sans-serif;
-}
