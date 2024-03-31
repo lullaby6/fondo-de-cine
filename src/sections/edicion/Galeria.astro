@@ -21,7 +21,12 @@ import Section from '../../layouts/Section.astro';
 			x-transition.opacity.duration.600ms
 			x-on:click="modal = false"
 		>
-			<img class="w-3/4 sm:w-1/2" x-bind:src="src">
+			<img 
+				class="w-3/4 sm:w-1/2" 
+
+				x-on:error="modal = false"
+				x-bind:src="src"
+			>
 		</div>
 
 		<div class="w-full columns-2 sm:columns-4 gap-x-4">
@@ -29,7 +34,7 @@ import Section from '../../layouts/Section.astro';
 					<img 
 						class="w-full object-cover cursor-pointer shadow mb-4 transition-transform hover:scale-[1.05]"   
 									
-						x-on:click=`modal = true; src = ${images_path}${index}.webp`
+						x-on:click=`modal = true; src = "${images_path}${index}.webp"`
 						x-bind:src=`'${images_path}${index}.webp'`
 
 						loading="lazy"
