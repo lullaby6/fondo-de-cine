@@ -1,12 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '@/layouts/Layout.astro';
 
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
 
-import Inicio from '../sections/inicio/Inicio.astro';
-import Ediciones from '../sections/inicio/Ediciones.astro';
-import Presentar from '../sections/inicio/Presentar.astro';
+import Inicio from '@/sections/inicio/Inicio.astro';
+import Ediciones from '@/sections/inicio/Ediciones.astro';
+import Presentar from '@/sections/inicio/Presentar.astro';
+import Apoyar from '@/sections/inicio/Apoyar.astro';
 ---
 
 <Layout title="FONDO DE CINE - Festival de CINE independiente 🎬">
@@ -22,6 +23,8 @@ import Presentar from '../sections/inicio/Presentar.astro';
       <Ediciones/>
 
       <Presentar/>
+
+      <Apoyar/>
     </main>
 
 	<Footer/>
