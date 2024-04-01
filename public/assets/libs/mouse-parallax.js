@@ -1,6 +1,15 @@
 
 window.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('mousemove', event => {    
+    window.addEventListener('mousemove', event => {
+        document.querySelectorAll('[mouse-parallax]').forEach(element => {
+            if (element.mouseParallaxLoaded) return
+            element.mouseParallaxLoaded = true
+
+            if (!element.hasAttribute('mouse-parallax-x')) element.setAttribute('mouse-parallax-x', (parseFloat(element.getAttribute('mouse-parallax')) || 2.5))
+    
+            if (!element.hasAttribute('mouse-parallax-y')) element.setAttribute('mouse-parallax-y', (parseFloat(element.getAttribute('mouse-parallax')) || 2.5))
+        })
+
         document.querySelectorAll('[mouse-parallax-x], [mouse-parallax-y]').forEach(element => {
             const parallax = { x: 0, y: 0 }
 
