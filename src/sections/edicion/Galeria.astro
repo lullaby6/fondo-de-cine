@@ -2,9 +2,10 @@
 interface Props {
 	images: number;
 	images_path: string
+	images_placeholder_path?: string
 }
 
-const { images, images_path } = Astro.props;
+const { images, images_path, images_placeholder_path } = Astro.props;
 
 import Section from '../../layouts/Section.astro';
 ---
@@ -31,15 +32,22 @@ import Section from '../../layouts/Section.astro';
 
 		<div class="w-full columns-2 sm:columns-4 gap-x-4">
 				{Array.from(Array(images).keys()).map(index => (
+					<div
+						class="bg-cover bg-center bg-black bg-opacity-50 w-full"
+						style=`background-image: url('${images_placeholder_path}${index}.webp');`
+					>
 					<img 
-						class="w-full object-cover cursor-pointer shadow mb-4 transition-transform hover:scale-[1.05]"   
+						class=" w-full object-cover cursor-pointer shadow mb-4 transition-transform hover:scale-[1.05]"
 									
+						x-on:load="event.target.animate([{opacity: 0}, {opacity: 1}], {duration: 600, fill: 'forwards', easing: 'ease-in-out'})"
+						x-on:error="event.target.remove()"
 						x-on:click=`modal = true; src = "${images_path}${index}.webp"`
 						x-bind:src=`'${images_path}${index}.webp'`
 
 						loading="lazy"
 						decoding="async"
 					>
+					</div>
 				))}
 		</div>
 	</div>

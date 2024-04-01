@@ -18,13 +18,16 @@ import { ViewTransitions, fade } from 'astro:transitions';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
+		<script src="/assets/libs/scroll-parallax.js" defer></script>
+		<script src="/assets/libs/mouse-parallax.js" defer></script>
+
 		<ViewTransitions />
 	</head>
 	<body class="text-neutral-800 w-full h-screen">
 		<slot />
 	</body>
 </html>
-<style is:global>
+<style is:global>	
 	*, html, body {
 		scroll-behavior: smooth !important;
 	}
