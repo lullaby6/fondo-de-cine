@@ -9,7 +9,9 @@ function scrollParallax(element) {
 
     if ((element.scrollParallaxPosY - element.getBoundingClientRect().height) - window.scrollY > (element.getBoundingClientRect().height / 10)) parallax = { x: 0, y: 0 }
 
-    element.style.translate = `${parallax.x}px ${parallax.y}px`;
+    element.animate([
+        { transform: `translate(${parallax.x}px, ${parallax.y}px)` },
+    ], { duration: 0, fill: 'forwards' })
 }
 
 window.addEventListener('DOMContentLoaded', () => {
