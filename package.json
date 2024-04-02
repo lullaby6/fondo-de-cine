@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@iconify-json/material-symbols": "^1.1.76",
     "@types/alpinejs": "^3.13.10",
     "alpinejs": "^3.13.7",
     "astro": "^4.5.12",

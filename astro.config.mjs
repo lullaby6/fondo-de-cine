@@ -17,6 +17,7 @@ export default defineConfig({
         ic: ["outline-email"],
         fe: ["instagram"],
         tabler: ["external-link"],
+        "material-symbols": ["menu", "close"],
       },
       }
     )
