@@ -10,21 +10,21 @@ const { images, images_path, images_placeholder_path } = Astro.props;
 import Section from '@/layouts/Section.astro';
 ---
 
-<Section 
-	className='bg-transparent'
+<Section
+	className='bg-transparent pb-10'
 	id="galeria"
 	title="GALERÍA 📸"
 >
 	<div x-data="{modal: false, src: '/assets/images/logo.webp'}">
-		<div 
+		<div
 			class="w-screen h-screen fixed top-0 left-0 bg-black bg-opacity-75 z-20 flex justify-center items-center"
-			
+
 			x-show="modal"
 			x-transition.opacity.duration.600ms
 			x-on:click="modal = false"
 		>
-			<img 
-				class="w-3/4 sm:w-1/2" 
+			<img
+				class="w-3/4 sm:w-1/2"
 
 				x-on:error="modal = false"
 				x-bind:src="src"
@@ -37,9 +37,9 @@ import Section from '@/layouts/Section.astro';
 						class="bg-cover bg-center bg-black bg-opacity-50 w-full"
 						style=`background-image: url('${images_placeholder_path}${index}.webp');`
 					>
-					<img 
+					<img
 						class=" w-full object-cover cursor-pointer shadow mb-4 transition-transform hover:scale-[1.05]"
-									
+
 						x-on:load="event.target.animate([{opacity: 0}, {opacity: 1}], {duration: 600, fill: 'forwards', easing: 'ease-in-out'})"
 						x-on:error="event.target.remove()"
 						x-on:click=`modal = true; src = "${images_path}${index}.webp"`
