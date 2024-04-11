@@ -23,11 +23,11 @@ import { ViewTransitions, fade } from 'astro:transitions';
 
 		<ViewTransitions />
 	</head>
-	<body class="text-neutral-800 w-full h-screen">
+	<body class="text-neutral-800 w-full h-screen font-gliker">
 		<slot />
 	</body>
 </html>
-<style is:global>	
+<style is:global>
 	*, html, body {
 		scroll-behavior: smooth !important;
 	}
@@ -57,8 +57,35 @@ import { ViewTransitions, fade } from 'astro:transitions';
 		src: url("/assets/fonts/Sceageus.otf") format("opentype");
 	}
 
+	@font-face {
+		font-family: "Gliker-Regular";
+		src: url("/assets/fonts/Gliker-Regular.ttf") format("opentype");
+	}
+
+	@font-face {
+		font-family: "Gliker-Bold";
+		src: url("/assets/fonts/Gliker-Bold.ttf") format("opentype");
+	}
+
+	@font-face {
+		font-family: "Gliker-SemiBold";
+		src: url("/assets/fonts/Gliker-SemiBold.ttf") format("opentype");
+	}
+
 	.font-sceageus {
 		font-family: "Sceageus", sans-serif;
+	}
+
+	.font-gliker {
+		font-family: "Gliker-Regular", sans-serif;
+	}
+
+	.font-gliker-bold {
+		font-family: "Gliker-Bold", sans-serif;
+	}
+
+	.font-gliker-semibold {
+		font-family: "Gliker-SemiBold", sans-serif;
 	}
 
 	.drop-shadow-outline-white {

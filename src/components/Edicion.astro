@@ -19,21 +19,21 @@ import { Icon } from 'astro-icon/components'
     </a>
 
     <div class="w-full flex flex-col sm:flex-row gap-6">
-        <div 
-            class="w-full sm:w-1/2 aspect-video" 
-            
-            x-data="{ image_index: 0, timeout: null }" 
+        <div
+            class="w-full sm:w-1/2 aspect-video"
+
+            x-data="{ image_index: 0, timeout: null }"
             x-init="timeout = setInterval(() => image_index++, 1200)"
             x-on:click="image_index++; clearTimeout(timeout); timeout = setTimeout(() => image_index++, 1200)"
             x-effect=`if (image_index >= ${images}) image_index = 0`
         >
             {Array.from(Array(images).keys()).map(index => (
-                <img 
-                    class="w-full h-full aspect-video object-cover absolute left-0 top-0 cursor-pointer shadow"   
-                    
+                <img
+                    class="w-full h-full aspect-video object-cover absolute left-0 top-0 cursor-pointer shadow"
+
                     x-data=`{image: ${index}}`
-                    x-show="image_index == image" 
-                    x-on:error="image_index = 0" 
+                    x-show="image_index == image"
+                    x-on:error="image_index = 0"
                     x-bind:src=`'${images_path}${index}.webp'`
                     x-transition.opacity.duration.600ms
 
@@ -42,7 +42,7 @@ import { Icon } from 'astro-icon/components'
                 >
             ))}
         </div>
-        <div class="w-full sm:w-1/2 flex flex-col gap-2 justify-center items-center sm:items-start">
+        <div class="w-full sm:w-1/2 flex flex-col gap-2 justify-start items-center sm:items-start">
             <p class="text-lg">
                 {desc}
             </p>

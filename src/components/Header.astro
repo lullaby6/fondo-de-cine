@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon/components'
 ---
 
-<header 
+<header
     class="fixed top-0 left-0 z-50  w-screen min-h-16  flex flex-col justify-center items-start sm:items-end"
 
     x-data="{menu: false}"
@@ -11,12 +11,12 @@ import { Icon } from 'astro-icon/components'
         <div
             class="absolute top-2 left-5"
 
-            x-show="menu == false" 
+            x-show="menu == false"
             x-transition.opacity.duration.600ms
 
             x-on:click="menu = true"
-        >            
-            <Icon 
+        >
+            <Icon
                 class="text-5xl text-neutral-200 opacity-50 transition-opacity hover:opacity-100"
 
                 name="material-symbols:menu"
@@ -27,12 +27,12 @@ import { Icon } from 'astro-icon/components'
         <div
             class="absolute top-2 left-5"
 
-            x-show="menu == true" 
+            x-show="menu == true"
             x-transition.opacity.duration.600ms
-            
+
             x-on:click="menu = false"
         >
-            <Icon 
+            <Icon
                 class="text-5xl text-neutral-200 opacity-50 transition-opacity hover:opacity-100"
 
                 name="material-symbols:close"
@@ -40,16 +40,16 @@ import { Icon } from 'astro-icon/components'
         </div>
     </div>
 
-    <nav 
-        class="w-full h-fit bg-black bg-opacity-75 pt-4 pb-16 flex flex-col items-center justify-center gap-8 !text-4xl"
-        
+    <nav
+        class="w-full h-fit bg-black bg-opacity-75 pt-8 pb-20 flex flex-col items-center justify-center gap-8 !text-3xl"
+
         x-show="menu"
         x-transition.opacity.duration.600ms
         x-on:click="menu = false"
     >
         <slot/>
     </nav>
-    
+
     <nav class="w-full h-16 hidden sm:flex justify-end items-center gap-8 px-36 bg-black bg-opacity-75">
         <slot/>
     </nav>
