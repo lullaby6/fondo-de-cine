@@ -10,6 +10,6 @@ const { title, id, className, slotClassName } = Astro.props;
 ---
 
 <section id={id} class=`bg-neutral-100 w-full min-h-screen flex flex-col gap-4 ${className}`>
-    {title && <h1 class="text-4xl w-full text-nowrap">{title}</h1>}
+    {title && <h1 class="text-4xl w-full text-nowrap font-gliker">{title}</h1>}
 	<slot />
 </section>
