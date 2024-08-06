@@ -6,9 +6,10 @@ interface Props {
     href: string
     images_path: string
     date: string
+    image_type?: string
 }
 
-const { title, desc, images, href, images_path, date } = Astro.props;
+const { title, desc, images, href, images_path, date, image_type = 'webp' } = Astro.props;
 
 import { Icon } from 'astro-icon/components'
 ---
@@ -38,7 +39,7 @@ import { Icon } from 'astro-icon/components'
                     x-data=`{image: ${index}}`
                     x-show="image_index == image"
                     x-on:error="image_index = 0"
-                    x-bind:src=`'${images_path}${index}.webp'`
+                    x-bind:src=`'${images_path}${index}.${image_type}'`
                     x-transition.opacity.duration.600ms
 
                     loading="lazy"
