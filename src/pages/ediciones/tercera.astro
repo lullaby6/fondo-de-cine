@@ -16,7 +16,7 @@ import Galeria from '@/sections/edicion/Galeria.astro';
     <Header>
       <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/.">INICIO </a>
       <!-- <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="#info">INFORMACIÓN </a> -->
-      <!-- <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="#cortos">CORTOS </a> -->
+      <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="#cortos">CORTOS </a>
       <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="#galeria">GALERÍA </a>
     </Header>
 
@@ -24,7 +24,7 @@ import Galeria from '@/sections/edicion/Galeria.astro';
 			<Image class="w-screen h-screen fixed left-0 top-0 object-cover" src="/assets/images/backgrounds/paper.webp" width={1} height={1} alt=""/>
 			<div class="w-screen h-screen fixed left-0 top-0 bg-black bg-opacity-20"></div>
 
-      <!-- <Cortos images={8} images_path='/assets/images/ediciones/tercera/cortos/'/> -->
+      <Cortos images={14} images_path='/assets/images/ediciones/tercera/cortos/'/>
 
 			<Galeria autor='Guadalupe Magarian' images={35} images_path='/assets/images/ediciones/tercera/' images_placeholder_path="/assets/images/ediciones/primera/placeholder/"/>
   </main>
