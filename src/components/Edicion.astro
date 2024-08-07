@@ -12,46 +12,54 @@ interface Props {
 const { title, desc, images, href, images_path, date, image_type = 'webp' } = Astro.props;
 
 import { Icon } from 'astro-icon/components'
+
+import { Image } from 'astro:assets';
 ---
 
-<div class="w-full flex flex-col gap-6 border-b border-neutral-400 pb-6">
-    <a class="flex flex-col items-center justify-between transition-all hover:pl-2 cursor-pointer border-b border-neutral-400 pb-1" href={href}>
+<div class="w-full flex flex-col md:flex-row justify-center items-end shrink gap-5 md:gap-10 p-10 md:p-20 md:pr-0 relative">
+    <Image class="absolute left-0 top-0 w-full h-full" width={1} height={1} src="/assets/images/backgrounds/black-paper.webp" alt="fondo de cine fondodecine background paper black paper"/>
+
+    <p class="absolute left-0 top-0 m-24 text-2xl text-neutral-200 tracking-wide">{date}</p>
+    <!-- <a class="flex flex-col items-center justify-between transition-all hover:pl-2 cursor-pointer pb-1" href={href}>
         <div class="flex items-center gap-1 w-full">
             <h1 class="text-2xl flex items-center gap-1 font-gliker sm:text-nowrap">{title}</h1>
             <Icon name="tabler:external-link"/>
         </div>
         <h1 class="w-full text-xl font-gliker">{date}</h1>
-    </a>
+    </a> -->
 
-    <div class="w-full flex flex-col sm:flex-row gap-6">
-        <div
-            class="w-full sm:w-1/2 aspect-video"
+    <!-- <div class="w-full h-full flex-1 bg-red-900 flex flex-col sm:flex-row gap-6"> -->
+        <div class="w-full flex items-end md:h-[300px] p-2 pt-6">
+            <div
+                class="w-full md:w-[400px] md:h-[225px] aspect-video"
 
-            x-data="{ image_index: 0, timeout: null }"
-            x-init="timeout = setInterval(() => image_index++, 1200)"
-            x-on:click="image_index++; clearTimeout(timeout); timeout = setTimeout(() => image_index++, 1200)"
-            x-effect=`if (image_index >= ${images}) image_index = 0`
-        >
-            {Array.from(Array(images).keys()).map(index => (
-                <img
-                    class="w-full h-full aspect-video object-cover absolute left-0 top-0 cursor-pointer shadow"
+                x-data="{ image_index: 0, timeout: null }"
+                x-init="timeout = setInterval(() => image_index++, 1200)"
+                x-on:click="image_index++; clearTimeout(timeout); timeout = setTimeout(() => image_index++, 1200)"
+                x-effect=`if (image_index >= ${images}) image_index = 0`
+            >
+                {Array.from(Array(images).keys()).map(index => (
+                    <img
+                        class="w-full h-full aspect-video object-cover absolute left-0 top-0 cursor-pointer shadow"
 
-                    x-data=`{image: ${index}}`
-                    x-show="image_index == image"
-                    x-on:error="image_index = 0"
-                    x-bind:src=`'${images_path}${index}.${image_type}'`
-                    x-transition.opacity.duration.600ms
+                        x-data=`{image: ${index}}`
+                        x-show="image_index == image"
+                        x-on:error="image_index = 0"
+                        x-bind:src=`'${images_path}${index}.${image_type}'`
+                        x-transition.opacity.duration.600ms
 
-                    loading="lazy"
-                    decoding="async"
-                >
-            ))}
+                        loading="lazy"
+                        decoding="async"
+                    >
+                ))}
+            </div>
         </div>
-        <div class="w-full sm:w-1/2 flex flex-col gap-2 justify-start items-center sm:items-start">
-            <p class="text-lg">
+
+        <div class="text-neutral-200 tracking-wide w-full flex flex-col gap-4 md:gap-2 justify-start items-center sm:items-start">
+            <p class="text-xl md:text-lg">
                 {desc}
             </p>
-            <a class="w-full sm:w-fit text-center text-xl sm:text-lg border border-neutral-500 px-2 py-1 sm:py-[0.5px] transition-transform hover:translate-x-2 shadow-[5px_5px_#6868684b]" href={href}>Ver mas...</a>
+            <a class="w-full sm:w-fit text-center text-lg sm:text-sm border border-neutral-500 px-2 py-1 sm:py-[0.5px] hover:translate-x-2 md:opacity-50 hover:opacity-100 transition-all" href={href}>Ver mas...</a>
         </div>
-    </div>
+    // </div>
 </div>
