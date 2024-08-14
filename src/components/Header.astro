@@ -1,5 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
+
+import { Image } from 'astro:assets';
 ---
 
 <header
@@ -49,7 +51,14 @@ import { Icon } from 'astro-icon/components'
         <slot/>
     </nav>
 
-    <nav class="w-full h-16 hidden sm:flex justify-end items-center gap-8 px-36 bg-black bg-opacity-50">
-        <slot/>
+    <nav class="w-full h-16 hidden sm:flex justify-between items-center px-36 bg-black bg-opacity-50">
+        <div class="flex gap-2 items-center justify-start">
+            <Image class="w-8 h-8 aspect-square hidden sm:block relative bottom-[2.5px]" src="/assets/images/logo.webp" width={1} height={1} alt=""/>
+
+            <h1 class="font-great-warrior text-neutral-300">FONDO DE CINE</h1>
+        </div>
+        <div class="sm:flex justify-end items-center gap-8">
+            <slot/>
+        </div>
     </nav>
 </header>
