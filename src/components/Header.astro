@@ -5,11 +5,11 @@ import { Image } from 'astro:assets';
 ---
 
 <header
-    class="fixed top-0 left-0 z-50 w-screen min-h-16  flex flex-col justify-center items-start sm:items-end"
+    class="fixed top-0 left-0 z-50 w-screen min-h-16  flex flex-col justify-center items-start md:items-end"
 
     x-data="{menu: false}"
 >
-    <div class="block sm:hidden w-full h-16 bg-black bg-opacity-50">
+    <div class="block md:hidden w-full h-16 bg-black bg-opacity-50">
         <div
             class="absolute top-2 left-5"
 
@@ -51,13 +51,13 @@ import { Image } from 'astro:assets';
         <slot/>
     </nav>
 
-    <nav class="w-full h-16 hidden sm:flex justify-between items-center px-36 bg-black bg-opacity-50">
+    <nav class="w-full h-16 hidden md:flex justify-between items-center px-36 bg-black bg-opacity-50">
         <div class="flex gap-2 items-center justify-start">
-            <Image class="w-8 h-8 aspect-square hidden sm:block relative bottom-[2.5px]" src="/assets/images/logo.webp" width={1} height={1} alt=""/>
+            <Image class="w-8 h-8 aspect-square hidden md:block relative bottom-[2.5px]" src="/assets/images/logo.webp" width={1} height={1} alt=""/>
 
             <h1 class="font-great-warrior text-neutral-300">FONDO DE CINE</h1>
         </div>
-        <div class="sm:flex justify-end items-center gap-8">
+        <div class="md:flex justify-end items-center gap-8">
             <slot/>
         </div>
     </nav>
