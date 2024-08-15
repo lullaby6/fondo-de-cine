@@ -37,7 +37,7 @@ import Section from '@/layouts/Section.astro';
 				{Array.from(Array(images).keys()).map(index => (
 					<div
 						class="bg-cover bg-center bg-black bg-opacity-50 w-full"
-						style=`background-image: url('${images_placeholder_path}${index}.${image_type}');`
+						style={images_placeholder_path ? `background-image: url('${images_placeholder_path}${index}.${image_type}');` : ''}
 					>
 					<img
 						class=" w-full object-cover cursor-pointer shadow mb-4 transition-transform hover:scale-[1.05]"
