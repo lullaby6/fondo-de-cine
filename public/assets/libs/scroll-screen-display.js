@@ -4,11 +4,9 @@ function scrollScreenDisplay() {
 
     const scrollScreenDisplayElements = document.querySelectorAll('[scroll-screen-display]')
 
-    
-
     scrollScreenDisplayElements.forEach((scrollScreenDisplayElement, scrollScreenDisplayElementIndex) => {
         if (screenNumber == scrollScreenDisplayElementIndex || (screenNumber > scrollScreenDisplayElements.length && scrollScreenDisplayElementIndex == scrollScreenDisplayElements.length - 1)) {
-            scrollScreenDisplayElement.style.display = scrollScreenDisplayElement.scrollScreenDisplayOriginalDisplay
+            scrollScreenDisplayElement.style.display = scrollScreenDisplayElement.scrollScreenDisplayOriginalDisplay || 'block'
 
             return;
         }
