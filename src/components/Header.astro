@@ -7,7 +7,8 @@ import { Image } from 'astro:assets';
 <header
     class="fixed top-0 left-0 z-50 w-screen min-h-16  flex flex-col justify-center items-start md:items-end"
 
-    x-data="{menu: false}"
+    x-init="ScrollReveal().reveal($el, { duration: 1000, ease: 'ease-in-out' })"
+    x-data="{ menu: false }"
 >
     <div class="block md:hidden w-full h-16 bg-black bg-opacity-50">
         <div
@@ -42,7 +43,7 @@ import { Image } from 'astro:assets';
     </div>
 
     <nav
-        class="w-full h-fit bg-black bg-opacity-50 pt-8 pb-20 flex flex-col items-center justify-center gap-8 !text-3xl"
+        class="md:hidden w-full h-fit bg-black bg-opacity-50 pt-8 pb-20 flex flex-col items-center justify-center gap-8 !text-3xl"
 
         x-show="menu"
         x-transition.opacity.duration.600ms

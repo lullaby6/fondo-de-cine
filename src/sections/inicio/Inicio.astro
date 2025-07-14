@@ -10,7 +10,9 @@ import { Icon } from 'astro-icon/components'
     </div>
 
     <div class="w-full flex flex-col gap-2 justify-center md:items-start items-center">
-        <Image class="w-full md:w-3/5" width={1} height={1} src="/assets/images/collages/title.webp" alt="fondo de cine fondodecine"/>
+        <Image 
+            x-init="ScrollReveal().reveal($el, { duration: 1000, ease: 'ease-in-out', distance: '12.5%', origin: 'bottom' })"
+            class="w-full md:w-3/5" width={1} height={1} src="/assets/images/collages/title.webp" alt="fondo de cine fondodecine"/>
     </div>
 
     <a href="#ediciones" class="absolute left-1/2 -translate-x-full bottom-2 text-neutral-200 opacity-50 transition-opacity hover:opacity-100 text-4xl">

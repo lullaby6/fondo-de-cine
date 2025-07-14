@@ -18,7 +18,10 @@ import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets';
 ---
 
-<div class="w-full px-8 py-20 pt-14 md:px-24 2xl:px-36 md:py-12 md:pr-12 relative overflow-hidden">
+<div 
+    class="w-full px-8 py-20 pt-14 md:px-24 2xl:px-36 md:py-12 md:pr-12 relative overflow-hidden"
+    x-init="ScrollReveal().reveal($el, { duration: 1000, ease: 'ease-in-out', distance: '12.5%', origin: 'bottom' })"
+>
     <Image class="absolute left-0 top-0 w-full h-full" width={1} height={1} src="/assets/images/backgrounds/black-paper.webp" alt="fondo de cine fondodecine background paper black paper"/>
 
     <!-- <a class="flex flex-col items-center justify-between transition-all hover:pl-2 cursor-pointer pb-1" href={href}>
