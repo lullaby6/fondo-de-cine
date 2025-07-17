@@ -12,12 +12,12 @@ import { Image } from 'astro:assets';
 >
     <div class="block md:hidden w-full h-16 bg-black bg-opacity-50">
         <div
-            class="absolute top-2 left-5"
+            class="absolute top-2 left-5 cursor-pointer"
 
             x-show="menu == false"
             x-transition.opacity.duration.600ms
 
-            x-on:click="menu = true"
+            x-on:click="menu = true; $refs['mobile-menu'].classList.remove('hidden')"
         >
             <Icon
                 class="text-5xl text-neutral-200 opacity-50 transition-opacity hover:opacity-100"
@@ -27,7 +27,7 @@ import { Image } from 'astro:assets';
         </div>
 
         <div
-            class="absolute top-2 left-5"
+            class="absolute top-2 left-5 cursor-pointer"
 
             x-show="menu == true"
             x-transition.opacity.duration.600ms
@@ -43,8 +43,9 @@ import { Image } from 'astro:assets';
     </div>
 
     <nav
-        class="md:hidden w-full h-fit bg-black bg-opacity-50 pt-8 pb-20 flex flex-col items-center justify-center gap-8 !text-3xl"
+        class="hidden md:hidden w-full h-fit bg-black bg-opacity-50 pt-8 pb-20 flex flex-col items-center justify-center gap-8 !text-3xl"
 
+        x-ref="mobile-menu"
         x-show="menu"
         x-transition.opacity.duration.600ms
         x-on:click="menu = false"
