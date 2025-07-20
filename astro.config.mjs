@@ -14,17 +14,17 @@ export default defineConfig({
     port: PORT
   },
   integrations: [
-      tailwind(),
-      alpinejs(),
-      icon({
+    tailwind(),
+    alpinejs(),
+    icon({
       include: {
         iconamoon: ["arrow-down-2-light"],
         ic: ["outline-email"],
         fe: ["instagram"],
         tabler: ["external-link"],
         "material-symbols": ["menu", "close"],
+        "grommet-icons": ["next","previous"],
       },
-      }
-    )
+    })
   ]
 });

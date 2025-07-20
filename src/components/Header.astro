@@ -10,7 +10,7 @@ import { Image } from 'astro:assets';
     x-init="ScrollReveal().reveal($el, { duration: 1000, ease: 'ease-in-out' })"
     x-data="{ menu: false }"
 >
-    <div class="block md:hidden w-full h-16 bg-black bg-opacity-50">
+    <div class="block md:hidden w-full h-16 bg-black backdrop-blur-sm bg-opacity-50">
         <div
             class="absolute top-2 left-5 cursor-pointer"
 
@@ -43,7 +43,7 @@ import { Image } from 'astro:assets';
     </div>
 
     <nav
-        class="hidden md:hidden w-full h-fit bg-black bg-opacity-50 pt-8 pb-20 flex flex-col items-center justify-center gap-8 !text-3xl"
+        class="hidden md:hidden w-full h-fit bg-black backdrop-blur-sm bg-opacity-50 pt-8 pb-20 flex flex-col items-center justify-center gap-8 !text-3xl"
 
         x-ref="mobile-menu"
         x-show="menu"
@@ -53,7 +53,7 @@ import { Image } from 'astro:assets';
         <slot/>
     </nav>
 
-    <nav class="w-full h-16 hidden md:flex justify-between items-center px-36 bg-black bg-opacity-50">
+    <nav class="w-full h-16 hidden md:flex justify-between items-center px-36 bg-black backdrop-blur-sm bg-opacity-50">
         <div class="flex gap-2 items-center justify-start">
             <Image class="w-8 h-8 aspect-square hidden md:block relative bottom-[2.5px]" src="/assets/images/logo.webp" width={1} height={1} alt=""/>
 

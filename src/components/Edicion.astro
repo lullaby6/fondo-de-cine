@@ -60,6 +60,8 @@ import { Image } from 'astro:assets';
                             x-bind:src=`'${images_path}${index}.${image_type}'`
                             x-transition.opacity.duration.600ms
 
+                            alt="festi fondo de cine indie independiente galeria imagen cortos buenos aires argentina"
+
                             loading="lazy"
                             decoding="async"
                         >
@@ -73,7 +75,7 @@ import { Image } from 'astro:assets';
                 <p class="2xl:text-2xl font-xtypewriter">
                     {desc}
                 </p>
-                <a class="font-xtypewriter w-full md:w-fit text-center text-lg md:text-sm border border-neutral-500 px-2 py-1 md:py-[0.5px] hover:translate-x-2 md:opacity-50 hover:opacity-100 transition-all" href={href}>Ver mas...</a>
+                <a class="font-xtypewriter w-full text-center text-lg md:text-sm border border-neutral-500 px-2 py-1 md:py-1 hover:translate-x-2 transition-all" href={href}>Ver mas...</a>
             </div>
         </div>
     </div>

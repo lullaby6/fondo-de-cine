@@ -6,15 +6,12 @@ import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 
-// import Informacion from '@/sections/edicion/Informacion.astro';
-import Cortos from '@/sections/edicion/Cortos.astro';
-import Galeria from '@/sections/edicion/Galeria.astro';
+import Galeria from '@/components/Galeria.astro';
 ---
 
 <Layout title="FONDO DE CINE - Primera edición ">
     <Header>
       <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="/.">INICIO</a>
-      <!-- <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="#info">INFORMACIÓN</a> -->
       <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="#cortos">CORTOS</a>
       <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="#galeria">GALERÍA</a>
     </Header>
@@ -23,9 +20,10 @@ import Galeria from '@/sections/edicion/Galeria.astro';
 			<Image class="w-screen h-screen fixed left-0 top-0 object-cover" src="/assets/images/backgrounds/paper.webp" width={1} height={1} alt=""/>
 			<div class="w-screen h-screen fixed left-0 top-0 bg-black bg-opacity-20"></div>
 
-      <Cortos images={9} images_path='/assets/images/ediciones/primera/cortos/'/>
-
-			<Galeria autor='Kayla Tesla' images={28} image_type="jpg" images_path='/assets/images/ediciones/primera/'/>
+      <Galeria id='cortos' title='CORTOS' images={9} images_path='/assets/images/ediciones/primera/cortos/'/>
+      <Galeria id='galeria' title='GALERIA' images={28} image_type="jpg" images_path='/assets/images/ediciones/primera/'>
+        <p slot="footer" class="italic w-full text-end">Fotos por Kayla Tesla.</p>
+      </Galeria>
   </main>
 
 	<Footer></Footer>

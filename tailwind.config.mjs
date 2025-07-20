@@ -8,9 +8,15 @@ export default {
 					'0%': { opacity: 0 },
 					'100%': { opacity: 1 },
 				},
+				fadeReveal: {
+					'0%': { opacity: 1 },
+					'50%': { opacity: 0 },
+					'100%': { opacity: 1 },
+				},
 			},
 			animation: {
 				'fade': 'fade 1s ease-in-out',
+				'fade-reveal': 'fadeReveal 1s ease-in-out',
 			}
 		},
 	},
