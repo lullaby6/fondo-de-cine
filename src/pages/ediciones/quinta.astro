@@ -9,14 +9,13 @@ import Footer from "@/components/Footer.astro";
 import Galeria from "@/components/Galeria.astro";
 ---
 
-<Layout title="FONDO DE CINE - Segunda edición">
+<Layout title="FONDO DE CINE - Quinta edición">
 	<Header>
 		<a
 			class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer"
 			href="/.">
 			INICIO
 		</a>
-		<!-- <a class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer" href="#info">INFORMACIÓN </a> -->
 		<a
 			class="text-nowrap text-neutral-200 opacity-75 transition-opacity hover:opacity-100 hover:underline cursor-pointer"
 			href="#cortos">
@@ -44,17 +43,18 @@ import Galeria from "@/components/Galeria.astro";
 		<Galeria
 			id="cortos"
 			title="CORTOS"
-			images={17}
-			images_path="/assets/images/ediciones/segunda/cortos/"
+			images={10}
+			images_path="/assets/images/ediciones/quinta/cortos/"
 		/>
+
 		<Galeria
 			id="galeria"
 			title="GALERIA"
-			images={8}
-			image_type="jpg"
-			images_path="/assets/images/ediciones/segunda/">
+			images={66}
+			image_type="webp"
+			images_path="/assets/images/ediciones/quinta/">
 			<p slot="footer" class="italic w-full text-end">
-				Fotos por Guadalupe Magarian.
+				Fotos por Karen Kohler.
 			</p>
 		</Galeria>
 	</main>

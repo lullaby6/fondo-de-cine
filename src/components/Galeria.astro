@@ -20,14 +20,14 @@ import Section from '@/layouts/Section.astro';
 	id={id}
 	title={title}
 >
-	<div 
-		x-data=`{ 
-			modal: false, 
+	<div
+		x-data=`{
+			modal: false,
 			images_path: ${JSON.stringify(images_path)},
-			images_count: ${images}, 
-			image_type: '${image_type}', 
+			images_count: ${images},
+			image_type: '${image_type}',
 			image_index: 0,
-			image_transition_duration: 300	 
+			image_transition_duration: 300
 		}`
 		@change="$refs.image.animate([{ opacity: 1 }, { opacity: 0.25 }, { opacity: 1 }],{ duration: image_transition_duration, ease: 'ease-in-out', fill: 'forwards' });"
 		@prev="setTimeout(() => {image_index = (image_index - 1 + images_count) % images_count}, (image_transition_duration/2)); $dispatch('change')"
@@ -44,7 +44,7 @@ import Section from '@/layouts/Section.astro';
 			x-on:click="modal = false"
 		>
 			<img
-				class="w-3/4 sm:w-1/2"
+				class="max-w-[75vw] max-h-[90vh]"
 				x-ref="image"
 				x-on:error="modal = false"
 				x-bind:src="`${images_path}${image_index}.${image_type}`"
@@ -60,15 +60,15 @@ import Section from '@/layouts/Section.astro';
 				x-on:click.stop="$dispatch('prev')"
 				class="absolute top-1/2 left-0 sm:left-10 -translate-y-1/2 z-100 text-white text-3xl md:text-4xl opacity-50 hover:opacity-100 cursor-pointer transition-opacity"
 			><Icon class="text" name="grommet-icons:previous"/></button>
-			<button 
+			<button
 				x-on:click.stop="$dispatch('next')"
 				class="absolute top-1/2 right-0 sm:right-10 -translate-y-1/2 z-100 text-white text-3xl md:text-4xl opacity-50 hover:opacity-100 cursor-pointer transition-opacity"
 			><Icon class="text" name="grommet-icons:next"/></button>
 		</div>
 
 		<div class="w-full columns-2 sm:columns-4 gap-x-4">
-			{Array.from(Array(images).keys()).map(i => i).map(index => (	
-				<div 
+			{Array.from(Array(images).keys()).map(i => i).map(index => (
+				<div
 					id={`${id}-${index}`}
 					class="bg-cover bg-center bg-black bg-opacity-50 w-full"
 					x-init="ScrollReveal().reveal($el, { duration: 1000, ease: 'ease-in-out', distance: '25%', origin: 'bottom' })"
