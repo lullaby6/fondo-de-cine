@@ -1,22 +1,38 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 ---
 
-<section class="w-full h-screen flex justify-center md:justify-start items-center gap-8 px-0 md:px-36">
-    <div scroll-screen-display class="bg-black w-full h-screen fixed left-0 top-0">
-        <Image class="w-full h-full object-cover" width={1} height={1} src="/assets/images/backgrounds/main.webp" alt="fondo de cine fondodecine logo"/>
-    </div>
+<section
+	class="w-full h-screen flex justify-center md:justify-start items-center gap-8 px-0 md:px-36">
+	<div
+		scroll-screen-display
+		class="bg-black w-full h-screen fixed left-0 top-0">
+		<Image
+			class="w-full h-full object-cover"
+			width={1}
+			height={1}
+			src="/assets/images/backgrounds/main.webp"
+			alt="fondo de cine fondodecine logo"
+		/>
+	</div>
 
-    <div class="w-full flex flex-col gap-2 justify-center md:items-start items-center">
-        <Image 
-            x-init="ScrollReveal().reveal($el, { duration: 1000, ease: 'ease-in-out', distance: '12.5%', origin: 'bottom' })"
-            class="w-full md:w-3/5" width={1} height={1} src="/assets/images/collages/title.webp" alt="fondo de cine fondodecine"
-        />
-    </div>
+	<div
+		class="w-full flex flex-col gap-2 justify-center md:items-start items-center">
+		<Image
+			x-init="ScrollReveal().reveal($el, { duration: 1000, ease: 'ease-in-out', distance: '12.5%', origin: 'bottom' })"
+			class="w-full md:w-3/5"
+			width={1}
+			height={1}
+			src="/assets/images/collages/title.webp"
+			alt="fondo de cine fondodecine"
+		/>
+	</div>
 
-    <a href="#ediciones" class="absolute left-1/2 -translate-x-full bottom-2 text-neutral-200 opacity-50 transition-opacity hover:opacity-100 text-4xl">
-        <Icon name="iconamoon:arrow-down-2-light"/>
-    </a>
+	<a
+		href="#ediciones"
+		class="absolute left-1/2 -translate-x-full bottom-2 text-neutral-200 opacity-50 transition-opacity hover:opacity-100 text-4xl">
+		<Icon name="iconamoon:arrow-down-2-light" />
+	</a>
 </section>
